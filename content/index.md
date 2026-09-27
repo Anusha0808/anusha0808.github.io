@@ -25,7 +25,7 @@ This is my little corner of the internet where I keep things I am learning, thin
 ## how this garden works
 I have divided the garden into a few little places: 
 
-| [[content/topics/index\|topics]]                 | [[content/blog/index\|blog]]                                  | [[content/pond/index\|pond]]                                                              |
-| ------------------------------------------------ | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| This is where I keep things I am learning about. | This is where I put things that are a little more standalone. | The pond is for everything that doesn't quite belong in the academic part of the garden.  |
+| [[topics/index\|topics]]                         | [[content/blog/index\|blog]]                                  | [[pond/index\|pond]]                                                                     |
+| ------------------------------------------------ | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| This is where I keep things I am learning about. | This is where I put things that are a little more standalone. | The pond is for everything that doesn't quite belong in the academic part of the garden. |
  
