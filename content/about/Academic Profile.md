@@ -4,21 +4,6 @@ draft: false
 tags:
   - "#cv"
 ---
-## EDUCATION
-
-###### ENS Paris Saclay, Université Paris-Saclay: _2026–2028 (expected)_
-
-> Master parisien de recherche en Informatique (MPRI)  
-> Paris, France  
-> Awarded the Université Paris-Saclay IDEX Scholarship (€1,000/month)
-
-###### Chennai Mathematical Institute: _2023–2026 (expected)_
-
-> BSc (Hons.) in Mathematics and Computer Science  
-> CS CGPA: 9.27 / 10  
-> Chennai, India  
-> Recipient of Shriram Scholarship: tuition fees waived and monthly stipend for the duration of undergraduate studies   
-
 ## RESEARCH
 
 ###### Studying bisimulation quotients of automatic trees to determine conditions for finiteness and decidability _(May 2026 – July 2026)_
@@ -34,6 +19,21 @@ tags:
 
 > Supervised by Prof. Samir Datta.  
 > Explored Lovasz and Plummer's book _Matching Theory_, Gallai-Edmonds Decomposition and Algorithm, and Ear Decomposition.
+## EDUCATION
+
+###### ENS Paris Saclay, Université Paris-Saclay: _2026–2028 (expected)_
+
+> Master parisien de recherche en Informatique (MPRI)  
+> Paris, France  
+> Awarded the Université Paris-Saclay IDEX Scholarship (€1,000/month)
+
+###### Chennai Mathematical Institute: _2023–2026 (expected)_
+
+> BSc (Hons.) in Mathematics and Computer Science  
+> CS CGPA: 9.27 / 10  
+> Chennai, India  
+> Recipient of Shriram Scholarship: tuition fees waived and monthly stipend for the duration of undergraduate studies   
+
 
 ## RELEVANT COURSES
 
