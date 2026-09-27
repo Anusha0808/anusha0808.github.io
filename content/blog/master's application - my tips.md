@@ -50,3 +50,6 @@ Well. This is a place where I do not have original thoughts about and I have lea
 [Annotated SOP by MIT Prof.](https://eugenielai.github.io/posts/another-annotated-sop.html)
 
 You can contact me and I can share my SOP with you if you would like to have a read.
+
+## Scholarships
+Scholarships deadline tend to be early. For example, some French scholarship deadlines open in September/October and close in November end. So keep a track of the scholarships deadlines. 
