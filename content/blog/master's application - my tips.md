@@ -48,3 +48,5 @@ Well. This is a place where I do not have original thoughts about and I have lea
 
 [By Shaily99](https://github.com/shaily99/advice?tab=readme-ov-file#advice)
 [Annotated SOP by MIT Prof.](https://eugenielai.github.io/posts/another-annotated-sop.html)
+
+You can contact me and I can share my SOP with you if you would like to have a read.
