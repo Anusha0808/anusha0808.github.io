@@ -8,7 +8,7 @@ last updated: 27 September, 2026
 Hey :) This is Anusha! (check out [[my quirkier non professional introduction]] or my [[Academic Profile]])
 
 ## currently
-I am mostly thinking and reading about  different kinds of #logic, [[content/topics/cat theory/index| category theory ]], Games on Graphs, which has been my favourite since an year, and whatever interesting thing I happen to stumble upon while doing my [[MPRI]].
+I am mostly thinking and reading about  different kinds of #logic, [[topics/cat theory/index| category theory ]], Games on Graphs, which has been my favourite since an year, and whatever interesting thing I happen to stumble upon while doing my [[MPRI]].
 ## my interests 
 I am interested in Theoretical Computer Science. I like how "clean" thinking in logic is, and how it makes me look at things in a philosophical manner.  I think I might end up joining the Category Theory cult. I have also started teaching! I teach classes for the preparation of [[my quirkier non professional introduction#^e10c6f|informatics olympiad]]. 
 ## about me
