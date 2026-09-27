@@ -4,127 +4,137 @@ draft: false
 tags:
   - "#cv"
 ---
-## RESEARCH EXPERIENCE
-###### Discrete Bidding Games *(May 2025- present)*
-> Working Under Prof. Guy Avni and Suman Sadhukhan
+## EDUCATION
 
-###### The dynamic complexity of maximum matching *(May 2024 - July 2024)*
->Supervised by Prof. Samir Datta.
->Explored Lovasz and Plummer’s book ”Matching Theory”, Gallai Edmond’s Decomposition and Algorithm, Ear Decomposition
+###### ENS Paris Saclay, Université Paris-Saclay: _2026–2028 (expected)_
 
-## EDUCATION 
-###### Chennai Mathematical Institute :                                                                       *2023- 2026 (expected)*
->BSc in Mathematics and Computer Science | CS CGPA : 9.0
->Chennai, India
+> Master parisien de recherche en Informatique (MPRI)  
+> Paris, France  
+> Awarded the Université Paris-Saclay IDEX Scholarship (€1,000/month)
 
-###### Model School GMSSS 32: *(2021-2023)*
->Scored 93.2% in 12th CBSE Boards
->Chandigarh, India
-###### St Xavier's Senior Secondary school *(till 2021)*
->Scored 96% in 10th ICSE Boards | Gordon House Prefect
->Chandigarh, India
-## INTERESTS 
-- Logic ( Classical Logic, [[What do intuitionists think?|Intuitionistic Logic]], [[Modal Logic]] )
-- [[Games On Graphs]] ( Parity Games, Bidding Games, EF Games )
-- [[Proofs and Types]]
-- Want to read up Finite Model Theory, Epistemic Logic, and more on how Logic connects with Philosophy and Linguistics
+###### Chennai Mathematical Institute: _2023–2026 (expected)_
 
-## ACADEMIC INVOLVMENT
-- **Teaching Assistant** 
-  
-  Theory Of Computation, Aug - Nov 2025 
-- **Modal Logic Reading Group** 
-  
-  Organize weekly one hour reading group on Modal logic, Oct 2025 - present
-## COURSES TAKEN  
-<table>
-  <thead>
-    <tr>
-      <th>SEMESTER 5</th>
-      <th>SEMESTER 4</th>
-      <th> SEMESTER 3 </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Proofs and Types</td>
-      <td>Weighted Automaton</td>
-      <td> Theory of Computation </td>
-    </tr>
-    <tr>
-      <td>Classical Logic</td>
-      <td>Programming Language Concepts <br> (Java, Rust, Lambda Calculus)</td>
-      <td> Design and Analysis of Algorithms </td>
-    </tr>
-    <tr>
-    <td> Games on Graphs </td>
-    <td> Differential Equations </td>
-    <td> Ring Theory </td>
-    </tr>
-    <tr>
-    <td> Algorithmic Game Theory </td>
-    <td> Topology </td>
-    <td> Multivariable Calculus </td>
-    </tr>
-    <tr>
-    <td > </td>
-    <td> Complex Analysis </td>
-    <td> Analysis II </td>
-  </tbody>
-</table>
-<table>
-<thead>
-	<tr>
-	<th> SEMESTER 2 </th>
-	<th> SEMESTER 1 </th>	
-	</tr>
-</thead>
-<tbody>
-	<tr>
-	<td> Discrete Mathematics </td>
-	<td> Functional Programming in Rust </td>
-	</tr>
-	<tr>
-	<td> Programming in Python </td>
-	<td> Analysis I </td>
-	</tr>
-	<tr>
-	<td> Calculus I </td>
-	<td> Linear Algebra </td>
-	</tr>
-	<tr>
-	<td> Group Theory </td>
-	<td> Classical Mechanics </td>
-	</tr>
-	<tr>
-	<td> Probability </td>
-	<td> English </td>
-	</tr>
-</tbody>	
-</table>
+> BSc (Hons.) in Mathematics and Computer Science  
+> CS CGPA: 9.27 / 10  
+> Chennai, India  
+> Recipient of Shriram Scholarship: tuition fees waived and monthly stipend for the duration of undergraduate studies   
 
-  
-## EVENTS & CONFERENCES
-- Selected to attend [**ACM Summer School on Quantum Circuits and Quantum Algorithms**](https://acm-qc-summer-school.gitlab.io/)
-  
-  Held from 9th June to 20th June, 2025
-- Selected to attend [TIFR Vigyan Vidushi 2025 in Theoretical CS](https://www.tcs.tifr.res.in/~stcs-vv-25/)
-  
-  Held from 16th June to 27th June, 2025
-- Attended [FSTTCS 2024](https://www.fsttcs.org.in/archives/2024/)
-  
-  Held in IIT Gandhinagar in December 2024
-- Invited to attend [IOITC 2023](https://www.iarcs.org.in/inoi/2023/#ioitc2023) : **International Olympiad in Informatics Training Camp, India**.  
-## AWARDS & HONORS
-- 2 $\times$ **TESSELLATE STEMS CS HEAD**: *(2024 and 2025)*
-  
-  STEMS is an exam conducted by the students of CMI for students throughout the country. 
-### Olympiads
-- **European Girls Olympiad in Informatics** (EGOI) : Bronze Medal *(2023)*
-- **Indian National Olympiad in Informatics** : Bronze Medal *(2023)*
-- **EGOI Team Selection Test**, India : 1st position *(2023)*
-- **Asia-Pacific Informatics Olympiad, China** : invited to represent India *(2023)*
+## RESEARCH
 
-## SKILLS 
-**Languages**: English, Hindi.
-**Programming:** Rust, Python, C++, JAVA, Haskell.
+###### Studying bisimulation quotients of automatic trees to determine conditions for finiteness and decidability _(May 2026 – July 2026)_
+
+> Supervised by Prof. Dietmar Berwanger and Prof. Laurent Doyen
+
+###### Constructing Adaptive Strategies for Discrete Bidding Games with Mean-payoff Objective _(May 2025 – August 2025)_
+
+> Supervised by Dr. Guy Avni and Suman Sadhukhan.  
+> Designed and implemented algorithms for computing Offline Best Responses and Iterative Sequences of Best Responses.
+
+###### Computing Maximum Matching of Bipartite Graphs Dynamically in NC _(May 2024 – July 2024)_
+
+> Supervised by Prof. Samir Datta.  
+> Explored Lovasz and Plummer's book _Matching Theory_, Gallai-Edmonds Decomposition and Algorithm, and Ear Decomposition.
+
+## RELEVANT COURSES
+
+- Finite Model Theory
+    
+- Complexity Theory
+    
+- Mathematical Logic
+    
+- Proofs, Types and Curry-Howard Isomorphism
+    
+- Games on Graphs
+    
+- Algorithmic Game Theory
+    
+- Weighted Automata and Transducers
+    
+- Functional Programming in Haskell
+    
+- Theory of Computation
+    
+- Design and Analysis of Algorithms
+    
+
+## ACADEMIC INVOLVEMENT
+
+- **Private Informatics Olympiad Tutor** — _2026–present_
+  Provide private instruction and one-one mentorship for students preparing for the **Informatics Olympiad (IO)**, focusing on algorithms, problem solving, and competitive programming.
+- **Tessellate STEMS Computer Science Head** — _2024, 2025_
+    
+    - Created original ad-hoc, algorithmic, constructive, automata and graph problems.
+        
+- **Teaching Assistant — Theory of Computation** — _Aug–Nov 2025_
+    
+    - Created problem sets, graded homework submissions, held tutorials, and had one-to-one interactions with students about the subject.
+        
+- **Modal Logic Reading Group** — _Oct–Nov 2025_
+    
+    - Organized a weekly one-hour reading group.
+        
+- **Student Seminar** — _Nov 2025_
+    
+    - Delivered an official student seminar at CMI on Bidding Games, presenting material studied during the research project under Prof. Guy Avni.
+        
+- **Paper Presentation** — _Nov 2025_
+    
+    - Co-delivered an academic presentation on _The 2-Token Theorem: Recognising History-Deterministic Parity Automata Efficiently_ by Karoliina Lehtinen and Aditya Prakash as part of the Games on Graphs course.
+        
+
+## CONFERENCES, SCHOOLS AND SPONSORSHIPS
+
+- **ANU Logic Summer School**, Canberra, Australia — _December 2025_
+    
+    - Sponsored to attend.
+        
+- **ACM Summer School on Quantum Circuits and Algorithms** — _June 2025_
+    
+    - Selected to attend.
+        
+- **TIFR Vigyan Vidushi 2025 in Theoretical CS** — _June 2025_
+    
+    - Sponsored to attend.
+        
+- **FSTTCS 2024**, IIT Gandhinagar, India — _December 2024_
+    
+    - Attended.
+        
+
+## OLYMPIAD EXPERIENCE
+
+- **European Girls Olympiad in Informatics (EGOI)** — _2023_
+    
+    - Represented India as part of a four-member team; awarded a Bronze Medal in Sweden.
+        
+- **Indian National Olympiad in Informatics** — _2023_
+    
+    - Final Round of the official Informatics Olympiad in India; awarded a Bronze Medal.
+        
+- **EGOI Team Selection Test, India** — _2023_
+    
+    - 1st position.
+        
+- **Asia-Pacific Informatics Olympiad, China** — _2023_
+    
+    - Invited to represent India.
+        
+- **IOI Training Camp** — _2023_
+    
+    - Selected to attend as one of 30 high school students nationwide.
+        
+
+## INITIATIVES
+
+- Working on initiatives to improve student mental health on campus.
+    
+- Organized a clothes donation drive — _January 2026_.
+    
+- Head of the Paper Recycling Club at CMI since _September 2024_.
+    
+
+## SKILLS
+
+**Languages:** English, Hindi.  
+**Programming:** Rust, Python, C++, Java, Haskell, TeX.

@@ -2,12 +2,12 @@
 longform:
   format: single
   title: trams
-title: <% tp.file.title %>
+title: trams. metro. rer
 draft: false
 tags:
 date: 26 September, 2026
 ---
-I found a cool channel on Trams
+I found a cool channel on Trams! Lets see how much I update this page and learn about this area.
 
 ## comparison between Berlin and Toronto's Trams
 
@@ -16,7 +16,6 @@ I found a cool channel on Trams
 # Paris Metro
 
 [Paris Metro](https://www.youtube.com/@RMTransit)
-
 
 ### The metro lines I have travelled in
 M3
