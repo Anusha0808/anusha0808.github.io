@@ -27,7 +27,7 @@ tags:
 > Paris, France  
 > Awarded the Université Paris-Saclay IDEX Scholarship (€1,000/month)
 
-###### Chennai Mathematical Institute: _2023–2026 (expected)_
+###### Chennai Mathematical Institute: _2023–2026_
 
 > BSc (Hons.) in Mathematics and Computer Science  
 > CS CGPA: 9.27 / 10  
