@@ -6,6 +6,7 @@ tags:
   - "#protein"
   - "#coffee"
   - "#cinnamon"
+date: 12 July, 2025
 ---
 credits : https://foolproofliving.com/yogurt-chia-pudding/ + my variations
 

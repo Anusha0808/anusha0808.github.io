@@ -4,6 +4,7 @@ draft: false
 tags:
   - "#recipes"
   - "#protein"
+date: July 11, 2025
 ---
 credits : https://thebigmansworld.com/protein-pancakes-recipe/
 ## INGREDIENTS 

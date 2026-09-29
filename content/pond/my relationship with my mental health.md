@@ -2,7 +2,7 @@
 title: my relationship with my mental health
 draft: false
 tags:
-date:
+date: 29 September, 2026
 ---
 They say not all days are the same, but sometimes some days can look exactly like the ones before it - frozen and dull.
 So I have found some other inspiring sentence to be my soothing balm - *Life has different seasons. This too is a season, it shall pass;*

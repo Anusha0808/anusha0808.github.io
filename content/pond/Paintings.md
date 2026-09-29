@@ -2,6 +2,7 @@
 title: Paintings
 draft: false
 tags: []
+date: 12 July, 2025
 ---
 I love painting! I paint primarily in acrylics. Besides acrylics, I also enjoy working with watercolors! I do not like sketching or drawing that much, and my favorite part is just dumping paint onto the canvas and playing around with the brushes. 
 
