@@ -1,5 +1,5 @@
 ---
-title: <%tp.file.title%>
+title: my relationship with my mental health
 draft: false
 tags:
 date:
