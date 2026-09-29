@@ -2,7 +2,7 @@
 title: Interploation
 draft: false
 tags:
-date:
+date: 14 September 2025
 ---
 # Constructing Craig Interpolation Formulas  
 *Based on notes from Guoxiang Huang (expanded with full proofs)*

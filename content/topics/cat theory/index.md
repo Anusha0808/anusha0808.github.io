@@ -7,6 +7,7 @@ longform:
   scenes: []
   ignoredFiles: []
 title: cat theory
+date: 14 September 2026
 ---
 Course Webpage: https://ensps-categories.github.io
 Timings 

@@ -6,4 +6,5 @@ longform:
   scenes: []
   ignoredFiles: []
 title: classical logic
+date: July 11, 2025
 ---

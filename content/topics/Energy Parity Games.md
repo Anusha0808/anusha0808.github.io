@@ -4,7 +4,7 @@ draft: false
 tags:
   - GOGR
   - Paper
-date:
+date: 14 September 2025
 ---
 Reference : https://lsv.ens-paris-saclay.fr/~doyen/papers/Energy_Parity_Games.pdf 
 
