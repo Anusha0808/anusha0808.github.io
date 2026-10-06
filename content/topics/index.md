@@ -6,4 +6,5 @@ longform:
   scenes: []
   ignoredFiles: []
 title: topics
+date: 5 December, 2025
 ---
