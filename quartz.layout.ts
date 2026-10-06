@@ -21,6 +21,7 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
+
     Component.ArticleTitle(),
   ],
   left: [
@@ -37,6 +38,11 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
+Component.RecentNotes({
+  title: "Recent Posts",
+  limit: 3,
+  showTags: false,
+}),
   ],
   right: [
     Component.Graph(),

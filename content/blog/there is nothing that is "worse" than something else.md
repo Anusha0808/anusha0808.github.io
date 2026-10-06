@@ -4,7 +4,7 @@ draft: false
 tags:
   - "#philosophy"
   - logic
-date: 10th January, 2026
+date: 10 January, 2026
 ---
 We often think that doing $A$ is worse than doing $B$, where $A, B$ are some actions. For instance, *killing your friend* is worse than *lying to your friend*.
 But is it?

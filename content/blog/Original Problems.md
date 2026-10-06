@@ -3,7 +3,7 @@ title: Original Problems
 draft: false
 tags:
   - "#stems"
-date: 12th January, 2026
+date: 12 January, 2026
 ---
 Here are some of the problems I proposed and were used in CMI's STEMS CS paper, which is my university's annual open book exam for high school and undergraduate students in India. I was one of the STEMS CS subject heads in 2026 and 2025 edition.  
 

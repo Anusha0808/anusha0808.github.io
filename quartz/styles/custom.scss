@@ -354,23 +354,24 @@
     fill: #F2B880  !important;
   }
 }
-
 // ===========================
-// LEFT SIDEBAR 
-// =============================
-:root[saved-theme="dark"]{
+// LEFT SIDEBAR
+// ===========================
+
+:root[saved-theme="dark"] {
   .folder-icon {
     stroke: #F2B880 !important;
   }
+
   .explorer .title-button h2 {
     color: #F2B880 !important;
   }
+
   .search {
     background-color: #e7cfbc1f;
     padding: 0.3rem;
     border-radius: 8px;
     border: 1px solid #f2b78041;
-    // margin-top: 1rem;s
   }
 
   .search-bar {
@@ -385,9 +386,11 @@
   .search-bar::placeholder {
     color: #aaa;
   }
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1) inset;
-}
 
+  .left.sidebar {
+    background-color: #472932 !important;
+  }
+}
 
 // RIGHT SIDEBAR
 
@@ -480,4 +483,49 @@ blockquote {
 .folder-title {
   font-size: 1.2rem !important; /* adjust this value as you like */
   font-weight: 600;   /* optional for better emphasis */
+}
+
+.recent-notes {
+  margin-top: 1.2rem;
+}
+
+.recent-notes h3 {
+  font-size: 1.05rem !important;
+  margin-bottom: 0.7rem;
+}
+
+.recent-notes .recent-ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.recent-notes .recent-li {
+  margin: 0 0 0.8rem 0 !important;
+  padding: 0 !important;
+}
+
+.recent-notes .section {
+  font-family: 'Linux Libertine', sans-serif !important;
+  font-size: 1.95rem !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.recent-notes .meta {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.9rem !important;
+  line-height: 1 !important;
+  margin: 0.15rem 0 0 0 !important;
+  opacity: 0.7;
+}
+/* Hide Recent Posts completely in Reader Mode */
+:root[reader-mode="on"] .recent-notes {
+  display: none !important;
+}
+/* Narrower left sidebar */
+@media all and (min-width: 800px) {
+  .left.sidebar {
+    width: 280px !important;
+  }
 }
