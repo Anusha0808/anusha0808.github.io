@@ -1,6 +1,6 @@
 ---
 title: welcome to my garden
-date:
+date: 27 September, 2026
 last updated: 27 September, 2026
 ---
 <img src="./files/profile-pic.jpg" alt="Profile picture" 
