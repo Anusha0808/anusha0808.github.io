@@ -4,7 +4,6 @@ draft: false
 tags:
 date: 14 September, 2025
 ---
-
 Here, I will post Slides on a topic whenever I make one.
 
 ## introduction to bidding games.
