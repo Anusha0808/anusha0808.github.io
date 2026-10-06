@@ -1,3 +1,10 @@
+---
+title: Introduction
+draft: true
+tags:
+  - logic
+date: 1 October, 2026
+---
 # basic building blocks
 three kinds of entities :
 - concepts (set of individuals)(similar to unary predicates in [[First Order Logic]])

@@ -1,6 +1,6 @@
 ---
 title: Extensions of ALC
-draft: false
+draft: true
 tags:
 date:
 ---

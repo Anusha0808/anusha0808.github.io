@@ -526,6 +526,11 @@ blockquote {
 /* Narrower left sidebar */
 @media all and (min-width: 800px) {
   .left.sidebar {
-    width: 280px !important;
+    width: 290px !important;
+  }
+}
+@media all and (min-width: 800px) {
+  .right.sidebar {
+    width: 290px !important;
   }
 }

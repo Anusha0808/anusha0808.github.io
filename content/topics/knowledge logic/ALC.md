@@ -7,7 +7,7 @@ tags:
   - knowledge
   - ontologies
   - mpri
-date:
+date: 1 October, 2026
 ---
 
 Complex Concepts

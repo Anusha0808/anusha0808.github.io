@@ -6,5 +6,5 @@ longform:
   scenes: []
   ignoredFiles: []
 title: knowledge logic
-date: " 21 September 2026"
+date: " 21 September, 2026"
 ---
