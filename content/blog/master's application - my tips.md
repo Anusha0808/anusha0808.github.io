@@ -1,3 +1,11 @@
+---
+title: master's application - my tips
+draft: true
+tags:
+  - mpri
+  - tips
+date: 28 September, 2026
+---
 I got into [[MPRI]]!!
 ## why I chose MPRI
 As I stated in the above post, I was looking for masters programmes which are good in logic, games on graphs and algorithms. The last topic is mostly considered disjoint from the first, therefore I was having a hard time finding programmes which had a variety of courses across these disciplies, and that the material in each course was also intensive enough. I found MPRI was meeting my requirements and that the course was taught in English.

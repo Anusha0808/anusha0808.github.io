@@ -8,4 +8,5 @@ longform:
   ignoredFiles: []
 showAllPages: "false"
 title: blog
+date: May 31, 2025
 ---

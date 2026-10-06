@@ -3,7 +3,7 @@ title: lyrics I like
 draft: false
 tags:
   - music
-date:
+date: 3 October, 2026
 ---
 Here comes the sun,
 Here comes the sun

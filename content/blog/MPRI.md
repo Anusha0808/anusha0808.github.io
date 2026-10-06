@@ -3,7 +3,7 @@ title: MPRI
 draft: false
 tags:
   - mpri
-date:
+date: 28 September, 2026
 ---
 From June 2025 to August 2025, I tried to look up for so many masters programme that teach both Theory A and Theory B, have good research, and have good teaching programmes. To my astonishment, I could only find one masters programme that I really liked, which was MPRI. I did not apply anywhere else, and yes I was hoping hard that I get into this. Gratefully, I got in! With scholarship :). I sincerely thank all of my professors who motivated me, guided me and supported my application! 
 For more details on the application procedures, and my journey with it, check out [[master's application - my tips]]
