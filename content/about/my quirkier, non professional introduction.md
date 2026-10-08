@@ -17,6 +17,10 @@ I like to dance and paint, and randomly [[pond/index|pond]]-er about philosophy 
 
 I also like to do Pilates!
 
+I think I might end up joining the Category Theory cult. 
+
+I support Palestine 🇵🇸 and Gen-z protests happening in India.
+
 ## informatics olympiad
 
 ^e10c6f

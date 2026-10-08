@@ -38,11 +38,11 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
-Component.RecentNotes({
+Component.DesktopOnly(Component.RecentNotes({
   title: "Recent Posts",
-  limit: 3,
+  limit: 4,
   showTags: false,
-}),
+})),
   ],
   right: [
     Component.Graph(),

@@ -22,39 +22,24 @@ date: 27 September, 2026
 ###### ENS Paris Saclay, Université Paris-Saclay: _2026–2028 (expected)_
 > Master parisien de recherche en Informatique ([[MPRI]]) 
 > [[trams. metro. rer|Paris]], France  
-> Awarded the Université Paris-Saclay IDEX Scholarship (€1,000/month)
-
+> Awarded the Université Paris-Saclay IDEX Scholarship 
 ###### Chennai Mathematical Institute: _2023–2026_
 > BSc (Hons.) in Mathematics and Computer Science  
 > CS CGPA: 9.27 / 10  
 > Chennai, India  
-> Recipient of Shriram Scholarship: tuition fees waived and monthly stipend for the duration of undergraduate studies   
+> Recipient of Shriram Scholarship.
 
 
 ## RELEVANT COURSES
 
-- [[Finite Model Theory]]
-    
-- Complexity Theory
-    
-- [[topics/classical logic/index |Mathematical Logic]]
-    
-- [[What do intuitionists think? |Proofs, Types and Curry-Howard Isomorphism]]
-    
-- Games on Graphs
-    
-- Algorithmic Game Theory
-    
-- Weighted Automata and Transducers
-    
-- Functional Programming in Haskell
-    
-- Theory of Computation
-    
-- Design and Analysis of Algorithms
-    
+| [[Finite Model Theory]]                                                       | Games on Graphs         | Complexity Theory                 |
+| ----------------------------------------------------------------------------- | ----------------------- | --------------------------------- |
+| [[topics/classical logic/index \|Mathematical Logic]]                         | Algorithmic Game Theory | Weighted Automata and Transducers |
+| [[What do intuitionists think? \|Proofs, Types and Curry-Howard Isomorphism]] |                         |                                   |
 
 ## ACADEMIC INVOLVEMENT
+
+### teaching
 
 - **Private Informatics Olympiad Tutor** — _2026–present_
   Provide private instruction and one-one mentorship for students preparing for the **Informatics Olympiad (IO)**, focusing on algorithms, problem solving, and competitive programming.
@@ -69,21 +54,14 @@ date: 27 September, 2026
 - **[[Modal Logic]] Reading Group** — _Oct–Nov 2025_
     
     - Organized a weekly one-hour reading group.
-        
-- **Student Seminar** — _Nov 2025_
-    
-    - Delivered an official student seminar at CMI on [[Slides |Bidding Games]], presenting material studied during the research project under Prof. Guy Avni.
-        
-- **Paper Presentation** — _Nov 2025_
-    
-    - Co-delivered an academic presentation on _The 2-Token Theorem: Recognising History-Deterministic Parity Automata Efficiently_ by Karoliina Lehtinen and Aditya Prakash as part of the Games on Graphs course.
-        
-
+### presentations
+- Delivered an official student seminar at CMI on [[Slides |Bidding Games]], presenting material studied during the research project under Prof. Guy Avni. 
+- Co-delivered an academic presentation on _The 2-Token Theorem: Recognising History-Deterministic Parity Automata Efficiently_ by Karoliina Lehtinen and Aditya Prakash as part of the Games on Graphs course.
 ## CONFERENCES, SCHOOLS AND SPONSORSHIPS
 
 - **ANU [[Godel| Logic Summer School]]**, Canberra, Australia — _December 2025_
     
-    - Sponsored to attend.
+    - Sponsored to travel and attend.
         
 - **ACM Summer School on Quantum Circuits and Algorithms** — _June 2025_
     
@@ -93,11 +71,6 @@ date: 27 September, 2026
     
     - Sponsored to attend.
         
-- **FSTTCS 2024**, IIT Gandhinagar, India — _December 2024_
-    
-    - Attended.
-        
-
 ## OLYMPIAD EXPERIENCE
 
 - **[[European Girls Olympiad In Informatics (EGOI)]]** — _2023_
@@ -121,16 +94,3 @@ date: 27 September, 2026
     - Selected to attend as one of 30 high school students nationwide.
         
 
-## INITIATIVES
-
-- Working on initiatives to improve student mental health on campus.
-    
-- Organized a clothes donation drive — _January 2026_.
-    
-- Head of the Paper Recycling Club at CMI -  _September 2024 - April 2026_.
-    
-
-## SKILLS
-
-**Languages:** English, Hindi.  
-**Programming:** Rust, Python, C++, Java, Haskell, TeX.
