@@ -8,28 +8,23 @@ date: 27 September, 2026
 ## RESEARCH
 
 ###### Studying bisimulation quotients of automatic trees to determine conditions for finiteness and decidability _(May 2026 – July 2026)_
-
 > Supervised by Prof. Dietmar Berwanger and Prof. Laurent Doyen
 
 ###### Constructing Adaptive Strategies for Discrete Bidding Games with Mean-payoff Objective _(May 2025 – August 2025)_
-
 > Supervised by Dr. Guy Avni and Suman Sadhukhan.  
 > Designed and implemented algorithms for computing Offline Best Responses and Iterative Sequences of Best Responses.
 
 ###### Computing Maximum Matching of Bipartite Graphs Dynamically in NC _(May 2024 – July 2024)_
-
 > Supervised by Prof. Samir Datta.  
 > Explored Lovasz and Plummer's book _Matching Theory_, Gallai-Edmonds Decomposition and Algorithm, and Ear Decomposition.
 ## EDUCATION
 
 ###### ENS Paris Saclay, Université Paris-Saclay: _2026–2028 (expected)_
-
-> Master parisien de recherche en Informatique (MPRI)  
-> Paris, France  
+> Master parisien de recherche en Informatique ([[MPRI]]) 
+> [[trams. metro. rer|Paris]], France  
 > Awarded the Université Paris-Saclay IDEX Scholarship (€1,000/month)
 
 ###### Chennai Mathematical Institute: _2023–2026_
-
 > BSc (Hons.) in Mathematics and Computer Science  
 > CS CGPA: 9.27 / 10  
 > Chennai, India  
@@ -38,13 +33,13 @@ date: 27 September, 2026
 
 ## RELEVANT COURSES
 
-- Finite Model Theory
+- [[Finite Model Theory]]
     
 - Complexity Theory
     
-- Mathematical Logic
+- [[topics/classical logic/index |Mathematical Logic]]
     
-- Proofs, Types and Curry-Howard Isomorphism
+- [[What do intuitionists think? |Proofs, Types and Curry-Howard Isomorphism]]
     
 - Games on Graphs
     
@@ -65,19 +60,19 @@ date: 27 September, 2026
   Provide private instruction and one-one mentorship for students preparing for the **Informatics Olympiad (IO)**, focusing on algorithms, problem solving, and competitive programming.
 - **Tessellate STEMS Computer Science Head** — _2024, 2025_
     
-    - Created original ad-hoc, algorithmic, constructive, automata and graph problems.
+    - Created [[Original Problems |orginial]] ad-hoc, algorithmic, constructive, automata and graph problems.
         
 - **Teaching Assistant — Theory of Computation** — _Aug–Nov 2025_
     
     - Created problem sets, graded homework submissions, held tutorials, and had one-to-one interactions with students about the subject.
         
-- **Modal Logic Reading Group** — _Oct–Nov 2025_
+- **[[Modal Logic]] Reading Group** — _Oct–Nov 2025_
     
     - Organized a weekly one-hour reading group.
         
 - **Student Seminar** — _Nov 2025_
     
-    - Delivered an official student seminar at CMI on Bidding Games, presenting material studied during the research project under Prof. Guy Avni.
+    - Delivered an official student seminar at CMI on [[Slides |Bidding Games]], presenting material studied during the research project under Prof. Guy Avni.
         
 - **Paper Presentation** — _Nov 2025_
     
@@ -86,7 +81,7 @@ date: 27 September, 2026
 
 ## CONFERENCES, SCHOOLS AND SPONSORSHIPS
 
-- **ANU Logic Summer School**, Canberra, Australia — _December 2025_
+- **ANU [[Godel| Logic Summer School]]**, Canberra, Australia — _December 2025_
     
     - Sponsored to attend.
         
@@ -105,7 +100,7 @@ date: 27 September, 2026
 
 ## OLYMPIAD EXPERIENCE
 
-- **European Girls Olympiad in Informatics (EGOI)** — _2023_
+- **[[European Girls Olympiad In Informatics (EGOI)]]** — _2023_
     
     - Represented India as part of a four-member team; awarded a Bronze Medal in Sweden.
         
@@ -132,7 +127,7 @@ date: 27 September, 2026
     
 - Organized a clothes donation drive — _January 2026_.
     
-- Head of the Paper Recycling Club at CMI since _September 2024_.
+- Head of the Paper Recycling Club at CMI -  _September 2024 - April 2026_.
     
 
 ## SKILLS
