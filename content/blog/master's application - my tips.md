@@ -1,6 +1,6 @@
 ---
 title: master's application - my tips
-draft: true
+draft: false
 tags:
   - mpri
   - tips

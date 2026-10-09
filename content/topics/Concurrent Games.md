@@ -31,6 +31,5 @@ At each state, there is atmost one agent that can perform more than one action. 
 ## Strategic Ability
 To express that a coalition of agents have a collective strategy to enforce some property and to reason on it.
 
-## ATL 
-A way to quantify over strategies by a coalition
-$\langle \langle A \rangle \rangle \phi$ : Coalition A has a way to satisfy the formula/objective $\phi$
+[[ATL]] is a way to quantify over strategies by a coalition
+
