@@ -1,5 +1,5 @@
 ---
-title: <%tp.file.title%>
+title: ATL
 draft: false
 tags:
 date: 8 October, 2026
