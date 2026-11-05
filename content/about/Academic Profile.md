@@ -57,19 +57,11 @@ date: 27 September, 2026
 ### presentations
 - Delivered an official student seminar at CMI on [[Slides#introduction to bidding games.|Bidding Games]], presenting material studied during the research project under Prof. Guy Avni. 
 - Co-delivered an academic presentation on _[[Slides#Two token Theorem|The 2-Token Theorem]]: Recognising History-Deterministic Parity Automata Efficiently_ by Karoliina Lehtinen and Aditya Prakash as part of the Games on Graphs course.
-## CONFERENCES, SCHOOLS AND SPONSORSHIPS
+## SPONSORSHIPS
 
 - **ANU [[Godel| Logic Summer School]]**, Canberra, Australia — _December 2025_
     
     - Sponsored to travel and attend.
-        
-- **ACM Summer School on Quantum Circuits and Algorithms** — _June 2025_
-    
-    - Selected to attend.
-        
-- **TIFR Vigyan Vidushi 2025 in Theoretical CS** — _June 2025_
-    
-    - Sponsored to attend.
         
 ## OLYMPIAD EXPERIENCE
 
