@@ -1,7 +1,8 @@
 ---
 title: Proofs and Types
 draft: false
-tags: 
+tags:
+  - logic
 date: 30 May, 2025
 ---
 ## posts 

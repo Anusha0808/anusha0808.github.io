@@ -6,6 +6,7 @@ tags:
   - games
   - mpri
   - automata
+  - Paper
 date: 5 Nov, 2026
 ---
 Here, I will post Slides on a topic whenever I make one.

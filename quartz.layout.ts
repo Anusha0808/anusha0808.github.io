@@ -73,7 +73,13 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+		title : "the yards",
+  		filterFn: (node) => {
+    		return node.data.tags?.includes("explorerexclude") !== true
+ 		 },
+	}
+		),
   ],
   right: [],
 }

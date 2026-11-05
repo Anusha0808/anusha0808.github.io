@@ -4,6 +4,7 @@ draft: false
 tags:
   - explorerexclude
 date: 19 October, 2026
+excludeFromIndex: "true"
 ---
 # Things defined
 - cartesian closed

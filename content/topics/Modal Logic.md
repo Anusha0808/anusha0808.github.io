@@ -13,7 +13,6 @@ I conduct weekly sessions on Modal Logic in my university. On this page, you can
 - [Boxes and Diamonds](https://bd.openlogicproject.org/bd-screen.pdf) Book by openlogicproject which introduces modal logic to people with non mathematical background (2)
 - [Possible Worlds: An introduction to Logic and its philosophy](https://www.sfu.ca/~swartz/pw/text/pw_chap01.pdf) 
 - [Modal Fallacy](https://www.sfu.ca/~swartz/modal_fallacy.htm) blog by one of the co-authors of the above book
-- 
 
 # Sessions
 ## 1st Session: 14th October

@@ -1,5 +1,5 @@
 ---
-title: cat theory
+title: Category Theory
 draft: false
 tags:
   - category-theory
