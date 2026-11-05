@@ -5,6 +5,7 @@ tags:
   - category-theory
   - mpri
   - class
+  - explorerexclude
 date: 7 September 2026
 ---
 ## Definitions

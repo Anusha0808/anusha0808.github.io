@@ -2,6 +2,7 @@
 title: class 5
 draft: false
 tags:
+  - explorerexclude
 date: 8 October, 2026
 ---
 I missed this class, so the notes were borrowed from a friend and converted to markdown using ai, and then I added remarks and thoughts;

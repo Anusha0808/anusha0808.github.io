@@ -5,6 +5,7 @@ tags:
   - category-theory
   - mpri
   - class
+  - explorerexclude
 date: " 21 September 2026"
 ---
 I am reading this from Tom Leinster's Book.

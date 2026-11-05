@@ -5,6 +5,7 @@ tags:
   - category-theory
   - mpri
   - class
+  - explorerexclude
 date: 28 September, 2026
 ---
 I tried inserting sketches from my iPad directly here.

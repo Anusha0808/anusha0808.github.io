@@ -37,10 +37,15 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+		title : "the yards",
+  		filterFn: (node) => {
+    		return node.data.tags?.includes("explorerexclude") !== true
+ 		 },
+	}),
 Component.DesktopOnly(Component.RecentNotes({
-  title: "Recent Posts",
-  limit: 4,
+  title: "new",
+  limit: 3,
   showTags: false,
 })),
   ],

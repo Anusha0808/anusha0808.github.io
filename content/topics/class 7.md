@@ -2,7 +2,8 @@
 title: class 7
 draft: false
 tags:
-date:
+  - explorerexclude
+date: 19 October, 2026
 ---
 # Things defined
 - cartesian closed
