@@ -10,7 +10,7 @@ For more details on the application procedures, and my journey with it, check ou
 
 # Courses I am taking in M1
 ## Foundations of cs 21 ects
-- [[topics/cat theory/index|category theory]]
+- [[Category Theory]]
 - Inititation to Verification 
 - [[Knowledge Logic]] 
 - probabilistic methods of computer science

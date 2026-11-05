@@ -534,3 +534,138 @@ blockquote {
     width: 290px !important;
   }
 }
+
+// folder index
+
+
+
+/* =========================================
+   LITERARY ARCHIVE — TWO COLUMN EDITION
+   ========================================= */
+
+/* Main two-column grid */
+.page-listing ul.section-ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  column-gap: 3.5rem !important;
+  row-gap: 2.5rem !important;
+
+  margin: 2rem 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Individual entries */
+.page-listing ul.section-ul > li.section-li {
+  display: block !important;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: none !important;
+  background: transparent !important;
+  list-style: none !important;
+}
+
+/* Entry content */
+.page-listing ul.section-ul > li.section-li > .section {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.5rem !important;
+}
+
+/* Date */
+.page-listing .section > p.meta {
+  order: 1;
+  margin: 0 !important;
+  font-size: 0.78rem;
+  color: var(--gray);
+  opacity: 0.8;
+}
+
+/* Title */
+.page-listing .section > .desc {
+  order: 2;
+  margin: 0;
+}
+
+.page-listing .section > .desc h3 {
+  margin: 0 !important;
+  font-family: var(--headerFont);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.page-listing .section > .desc h3 a {
+  color: var(--dark);
+  text-decoration: none;
+  background: none;
+  transition: color 0.2s ease;
+}
+
+.page-listing .section > .desc h3 a:hover {
+  color: var(--secondary);
+}
+
+/* Tags — inline horizontal row */
+.page-listing .section > ul.tags {
+  order: 3;
+
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+
+  gap: 0.3rem 0.8rem !important;
+  width: 100%;
+  margin: 0.25rem 0 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.page-listing .section > ul.tags > li {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.page-listing .section > ul.tags .tag-link {
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+
+  color: var(--secondary);
+  font-size: 0.76rem;
+  text-decoration: none;
+}
+
+.page-listing .section > ul.tags .tag-link::before {
+  content: "#";
+}
+
+.page-listing .section > ul.tags .tag-link:hover {
+  text-decoration: underline;
+}
+
+/* No separators or hover movement */
+.page-listing ul.section-ul > li.section-li:hover {
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+  .page-listing ul.section-ul {
+    grid-template-columns: 1fr !important;
+    row-gap: 2rem !important;
+  }
+}
+
