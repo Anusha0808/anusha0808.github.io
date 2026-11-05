@@ -12,7 +12,7 @@ For more details on the application procedures, and my journey with it, check ou
 ## Foundations of cs 21 ects
 - [[topics/cat theory/index|category theory]]
 - Inititation to Verification 
-- [[topics/knowledge logic/index|knowledge logic]]
+- [[Knowledge Logic]] 
 - probabilistic methods of computer science
 - Introduction to Solvers
 - proof theory
