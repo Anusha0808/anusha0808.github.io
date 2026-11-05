@@ -41,7 +41,7 @@ date: 27 September, 2026
 
 ### teaching
 
-- **Private Informatics Olympiad Tutor** — _2026–present_
+- **Informatics Olympiad Tutor** — _2026–present_
   Provide private instruction and one-one mentorship for students preparing for the **Informatics Olympiad (IO)**, focusing on algorithms, problem solving, and competitive programming.
 - **Tessellate STEMS Computer Science Head** — _2024, 2025_
     
@@ -55,8 +55,8 @@ date: 27 September, 2026
     
     - Organized a weekly one-hour reading group.
 ### presentations
-- Delivered an official student seminar at CMI on [[Slides |Bidding Games]], presenting material studied during the research project under Prof. Guy Avni. 
-- Co-delivered an academic presentation on _The 2-Token Theorem: Recognising History-Deterministic Parity Automata Efficiently_ by Karoliina Lehtinen and Aditya Prakash as part of the Games on Graphs course.
+- Delivered an official student seminar at CMI on [[Slides#introduction to bidding games.|Bidding Games]], presenting material studied during the research project under Prof. Guy Avni. 
+- Co-delivered an academic presentation on _[[Slides#Two token Theorem|The 2-Token Theorem]]: Recognising History-Deterministic Parity Automata Efficiently_ by Karoliina Lehtinen and Aditya Prakash as part of the Games on Graphs course.
 ## CONFERENCES, SCHOOLS AND SPONSORSHIPS
 
 - **ANU [[Godel| Logic Summer School]]**, Canberra, Australia — _December 2025_

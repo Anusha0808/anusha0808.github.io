@@ -69,10 +69,6 @@ https://ncatlab.org/nlab/show/generalized+the cool stuff
 the empty category has finite products. but no terminal object.
 vec also has finite products. terminal object : 0 dimensional vector space.
 
-question? does every non trivial category C which has finite products a terminal objects?
-
-yes.
-
 ### Prop : terminal object acts as identity in product.
 Let C be a category with finite product. Show that $1 \times A \cong A$
 Proof. 

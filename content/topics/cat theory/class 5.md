@@ -71,10 +71,8 @@ Consider the forgetful functor $G = U: \mathbf{Vect} \to \mathbf{Set}$.
 Let $\mathcal{C}$ and $\mathcal{D}$ be two categories. An **adjunction** from $\mathcal{C}$ to $\mathcal{D}$ is a triple $(F, G, \theta)$, where:
 
 - $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ are functors.
-    
-- $\theta$ is a collection of bijection maps indexed by $C \in \operatorname{Ob}(\mathcal{C})$ and $D \in \operatorname{Ob}(\mathcal{D})$:
-    
-    $$\theta_{C, D}: \mathcal{C}(C, GD) \xrightarrow{\cong} \mathcal{D}(FC, D)$$
+- $\theta$ is a collection of bijection maps indexed by $C \in \operatorname{Ob}(\mathcal{C})$ and $D \in \operatorname{Ob}(\mathcal{D})$
+- $$\theta_{C, D}: \mathcal{C}(C, GD) \xrightarrow{\cong} \mathcal{D}(FC, D)$$
 - $\theta$ is **natural in both variables** $C$ and $D$. Namely, for any $g: C' \to C$ in $\mathcal{C}$ and $h: D \to D'$ in $\mathcal{D}$:
     
     $$\theta_{C', D'}(G(h) \circ f \circ g) = h \circ \theta_{C, D}(f) \circ F(g)$$
