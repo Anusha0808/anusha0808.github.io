@@ -1,5 +1,5 @@
 ---
-title: welcome to my garden
+title: welcome
 date: 27 September, 2026
 last updated: 27 September, 2026
 ---

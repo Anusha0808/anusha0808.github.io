@@ -732,4 +732,108 @@ blockquote {
   transition: none !important;
 }
 
+@font-face {
+  font-family: "VictorianDisplay";
+  src: url("/static/fonts/victorian-parlor-font/font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+/* Victorian font for the website title */
+:root[saved-theme="dark"] .left.sidebar h2.page-title,
+:root[saved-theme="dark"] .left.sidebar h2.page-title a,
+.left.sidebar .page-title,
+.left.sidebar .page-title a {
+  font-family: "VictorianDisplay", serif !important;
+  font-size: 2.75rem;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+/* =========================================
+   VICTORIAN EXPLORER PANEL
+   ========================================= */
+
+.left.sidebar .explorer {
+  position: relative;
+  isolation: isolate;
+
+  padding: 2rem 1.4rem !important;
+  margin: 1rem 0 !important;
+
+  background: rgba(35, 18, 25, 0.12);
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Antique frame around Graph View */
+.right.sidebar .graph {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  padding: 2rem 1rem !important;
+  margin: 1rem 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.right.sidebar .graph::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("/static/images/border.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 105% 73%;
+  opacity: 0.7;
+  pointer-events: none;
+}
+/* Explorer heading */
+.left.sidebar .explorer .title-button h2 {
+  font-family: "VictorianDisplay", serif !important;
+  color: #F2B880 !important;
+}
+
+/* Folder names */
+.left.sidebar .explorer a {
+  color: #E7CFBC !important;
+}
+
+/* Folder icons */
+.left.sidebar .explorer svg {
+  color: #D9A99C;
+}
+
+/* Remove Quartz's original Graph View box */
+.right.sidebar .graph > .graph-outer {
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Floral ornaments around the welcome heading */
+/* Floral branches beside the page title */
+/* Botanical branches flanking the page title */
+h1.article-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+}
+
+h1.article-title::before,
+h1.article-title::after {
+  content: "";
+  flex: 1 1 0;
+  min-width: 5rem;
+  height: 5rem;
+  background-image: url("/static/images/ornament.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
