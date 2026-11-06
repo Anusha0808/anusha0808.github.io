@@ -580,7 +580,7 @@ blockquote {
   order: 1;
   margin: 0 !important;
   font-size: 0.78rem;
-  color: var(--gray);
+  color: var(--white);
   opacity: 0.8;
 }
 
@@ -593,7 +593,7 @@ blockquote {
 .page-listing .section > .desc h3 {
   margin: 0 !important;
   font-family: var(--headerFont);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -619,7 +619,7 @@ blockquote {
   justify-content: flex-start !important;
   align-items: center !important;
 
-  gap: 0.3rem 0.8rem !important;
+  gap: 0.1rem 0.8rem !important;
   width: 100%;
   margin: 0.25rem 0 0 !important;
   padding: 0 !important;
@@ -642,8 +642,8 @@ blockquote {
   border: none !important;
   border-radius: 0 !important;
 
-  color: var(--secondary);
-  font-size: 0.76rem;
+  color: var(--tertiary);
+  font-size: 0.86rem;
   text-decoration: none;
 }
 
@@ -655,11 +655,7 @@ blockquote {
   text-decoration: underline;
 }
 
-/* No separators or hover movement */
-.page-listing ul.section-ul > li.section-li:hover {
-  border: none !important;
-  padding: 0 !important;
-}
+
 
 /* Responsive */
 @media (max-width: 750px) {
@@ -668,4 +664,72 @@ blockquote {
     row-gap: 2rem !important;
   }
 }
+
+/* Victorian post frames */
+.page-listing ul.section-ul > li.section-li {
+  position: relative !important;
+  isolation: isolate;
+
+  min-height: 340px;
+  box-sizing: border-box;
+
+  padding: 7.2rem 3.8rem !important;
+  margin: 0 !important;
+
+  border: none !important;
+  background: transparent !important;
+}
+
+.page-listing ul.section-ul > li.section-li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-image: url("/static/images/vintage.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 130% 80%;
+
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Keep post content inside the safe area */
+.page-listing ul.section-ul > li.section-li > .section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Improve spacing between post elements */
+.page-listing .section .desc {
+  margin-bottom: 1.5rem;
+}
+
+.page-listing .section .meta {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 750px) {
+  .page-listing ul.section-ul > li.section-li {
+    min-height: 230px;
+    padding: 3.5rem 2.8rem !important;
+  }
+}
+
+.page-listing ul.section-ul > li.section-li,
+.page-listing ul.section-ul > li.section-li > .section {
+  transform: none !important;
+  translate: none !important;
+  scale: none !important;
+}
+
+.page-listing ul.section-ul > li.section-li:hover,
+.page-listing ul.section-ul > li.section-li:hover > .section {
+  transform: none !important;
+  translate: none !important;
+  scale: none !important;
+  transition: none !important;
+}
+
 

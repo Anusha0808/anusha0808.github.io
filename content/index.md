@@ -18,3 +18,4 @@ I am interested in Theoretical Computer Science. I like how "clean" thinking in 
 I am currently a M1 student at [ENS Paris-Saclay](https://ens-paris-saclay.fr/), doing the [[MPRI]]. Before this, I did my Bachelor's in Mathematics and Theoretical Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in/). 
 
 If you want to get in touch, drop me an email at [anuzrella@gmail.com](mailto:anuzrella@gmail.com).
+
