@@ -843,3 +843,54 @@ body[data-slug="index"] .popover-hint p:first-of-type::first-letter {
   font-weight: normal;
   position: static !important;
 }
+/* Vertical botanical twig */
+/* Vertical botanical twig beside Explorer folders */
+:root[saved-theme="dark"] .left.sidebar .explorer {
+  .explorer-content {
+    position: relative;
+  }
+
+  /* Hide the original folder arrows, but preserve their space */
+  .folder-icon {
+    visibility: hidden !important;
+  }
+
+  /* One continuous twig */
+  .explorer-content::before {
+    content: "";
+    position: absolute;
+    left: -13px;
+    top: 2px;
+    width: 40px;
+    height: calc(100%);
+    background-image: url("/static/images/twig2.png");
+    background-position: center;
+    pointer-events: none;
+    z-index: 2;
+    background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center top;
+  }
+}
+/* Gentle folder hover movement */
+:root[saved-theme="dark"] .left.sidebar .explorer {
+
+  .explorer-content a {
+    display: inline-block;
+    transition: transform 0.22s ease;
+  }
+
+  .explorer-content a:hover {
+    transform: translateX(6px);
+  }
+}
+/* Gentle enlargement of Victorian post cards */
+.page-listing ul.section-ul > li.section-li {
+  transition: transform 0.25s ease !important;
+  transform-origin: center center;
+}
+
+.page-listing ul.section-ul > li.section-li:hover {
+  transform: scale(1.04) !important;
+  z-index: 5;
+}
