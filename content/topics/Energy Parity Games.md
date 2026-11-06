@@ -1,6 +1,6 @@
 ---
 title: Energy Parity Games
-draft: false
+draft: true
 tags:
   - Paper
   - games

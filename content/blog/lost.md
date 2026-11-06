@@ -1,7 +1,8 @@
 ---
 title: lost
 draft: false
-tags: 
+tags:
+  - explorerexclude
 date: 30 May, 2025
 ---
 I was preparing for JEE in my 11th grade.
