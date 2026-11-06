@@ -824,7 +824,6 @@ h1.article-title {
   justify-content: center;
   gap: 0.6rem;
   text-align: center;
-  font-family: "VictorianDisplay", serif !important;
 }
 
 h1.article-title::before,
@@ -837,4 +836,25 @@ h1.article-title::after {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% auto;
+}
+
+
+@font-face {
+  font-family: "DropCap";
+  src: url("/static/fonts/flora1-font/font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Victorian drop cap — homepage only */
+/* Victorian drop cap */
+body[data-slug="index"] .popover-hint p:first-of-type::first-letter {
+  float: left !important;
+  font-family: "DropCap", serif !important;
+  font-size: 4.5rem !important;
+  line-height: 0.2em !important;
+  margin: 0.04em 0.10em 0 0 !important;
+  padding: 0 !important;
+  color: #e7b99f;
+  font-weight: normal;
+  position: static !important;
 }
