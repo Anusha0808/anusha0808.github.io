@@ -1,6 +1,6 @@
 ---
 title: board games!!
-draft: true
+draft: false
 tags:
   - games
 date: 27 September, 2026
@@ -13,3 +13,5 @@ Here are the board games that I have played:
 - Catan
 - War Chest
 - Forest Shuffle (played only once)
+- A Ticket to RIde
+- Jaipur 
