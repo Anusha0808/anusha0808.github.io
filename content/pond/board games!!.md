@@ -3,7 +3,7 @@ title: board games!!
 draft: false
 tags:
   - games
-date: 27 September, 2026
+date: 6 November, 2026
 ---
 I have recently gotten into playing board games.
 I am currently playing warchest with my friends and giving them a tough game :)
