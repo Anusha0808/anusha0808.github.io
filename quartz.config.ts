@@ -22,9 +22,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Arima",
-        body: "Montserrat",
-        code: "IBM Plex Mono",
+        header: "Arima",         // Your signature headings
+  	body: "Lora",            // Warm calligraphic serif
+ 	 code: "JuliaMono", 
       },
       colors: {
         lightMode: {
