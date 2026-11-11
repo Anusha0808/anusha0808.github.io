@@ -14,3 +14,7 @@ I have used markers from BRUSTO, it was a begginer 10-12 marker set. I am soon g
 ![[doodles-1791393191344.webp|384]]![[doodles-1791393191343.webp|310x384]]
 ![[doodles-1791393475453.webp|488]]![[doodles-1791393451597.webp|199x429]]
 The last one is inspired from the tainted class stains at European churches.
+
+
+## doodles with my **72 MARKERS KIT!!**
+![[doodles-1794421595732.webp|575]]![[doodles-1794421595731.webp|294]]![[doodles-1794421652555.webp|300x411]]
