@@ -18,3 +18,4 @@ The last one is inspired from the tainted class stains at European churches.
 
 ## doodles with my **72 MARKERS KIT!!**
 ![[doodles-1794421595732.webp|575]]![[doodles-1794421595731.webp|294]]![[doodles-1794421652555.webp|300x411]]
+![[doodles-1794426332049.webp|295]]![[doodles-1794426332050.webp|319]]
