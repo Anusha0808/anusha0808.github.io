@@ -1,7 +1,8 @@
 ---
 title: European Girls Olympiad In Informatics (EGOI)
 draft: false
-tags: 
+tags:
+  - olympiad
 date: July 11, 2025
 ---
 In 2023, I was a member of the Indian team at EGOI, which took place in Lund, Sweden
