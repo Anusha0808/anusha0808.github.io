@@ -28,8 +28,9 @@ export default (() => {
     const iconPath = joinSegments(baseDir, "static/icon.png")
 
     // Url of current page
-    const socialUrl =
-      fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
+   const canonicalUrl = fileData.slug === "404" || fileData.slug === "index" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
+
+  const socialUrl = canonicalUrl
 
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
       (e) => e.name === CustomOgImagesEmitterName,
