@@ -472,6 +472,10 @@ $callout-colors: (
   }
 }
 
+:root[saved-theme="dark"] .recent-notes h3 {
+  color: var(--secondary);
+}
+
 :root[reader-mode="on"] .recent-notes {
   display: none !important;
 }
@@ -627,7 +631,7 @@ $callout-colors: (
 }
 
 // =============================================================================
-// 9. ORNAMENTS
+// 9. ORNAMENTS (title branches, drop cap, graph frame)
 // =============================================================================
 
 // botanical branches flanking the article title
@@ -664,38 +668,39 @@ body[data-slug="index"] .popover-hint p:first-of-type::first-letter {
   color: var(--blush);
 }
 
-// antique frame around the graph view
+// Graph box: the "Graph View" title stays in normal document flow, above the
+// canvas. The frame is drawn on .graph-outer (the canvas wrapper) only, and
+// is sized entirely by its own padding — not by an inset measured from the
+// title area — so it can never sit behind or overlap the title.
 .right.sidebar .graph {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+.right.sidebar .graph > .graph-outer {
   position: relative;
   isolation: isolate;
   box-sizing: border-box;
-  padding: 2rem 1rem !important;
-  margin: 1rem 0 !important;
-  background: transparent !important;
+  margin: 0.75rem 0 0 !important;
+  padding: 2.25rem 1.25rem !important; // this padding IS the frame's size
   border: none !important;
   border-radius: 0 !important;
+  background: transparent !important;
   box-shadow: none !important;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background-image: url("/static/images/border.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 105% 73%;
-    opacity: 0.7;
-    pointer-events: none;
-  }
-
-  // remove Quartz's own graph box
-  > .graph-outer {
-    border: none !important;
-    border-radius: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-  }
+.right.sidebar .graph > .graph-outer::before {
+  content: "";
+  position: absolute;
+  inset: 0; // fills exactly the padded box above — no overlap with the title
+  z-index: -1;
+  background-image: url("/static/images/border.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 // =============================================================================
@@ -720,6 +725,13 @@ body[data-slug="index"] .popover-hint p:first-of-type::first-letter {
   white-space: pre-line !important;
 }
 
-:root[saved-theme="dark"] .recent-notes h3 {
-  color: var(--secondary);
+// tighter right-sidebar spacing: Quartz's default gap is 2rem, and each
+// component also carries its own margin, which stacks on top of that gap
+.right.sidebar {
+  gap: 1rem !important;
+}
+
+.right.sidebar > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
