@@ -1,5 +1,7 @@
+
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+
 /**
  * Quartz 4 Configuration
  *
@@ -22,31 +24,34 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Arima",         // Your signature headings
-  	body: "Lora",            // Warm calligraphic serif
- 	 code: "JuliaMono", 
+        header: "Arima", // headings
+        body: "Montserrat", // body text
+        code: "IBM Plex Mono", // code
       },
+      // The whole site is coloured from this palette. custom.scss reads these
+      // as CSS variables (--light, --dark, --secondary, ...) and derives every
+      // other colour from them, so this is the only place to change colours.
       colors: {
         lightMode: {
-          light: "#F7F4EF",
-          lightgray: "#DDD7D0",
-          gray: "#9A928A",
-          darkgray: "#514C46",
-          dark: "#292622",
-          secondary: "#80634F",
-          tertiary: "#708B7E",
-          highlight: "rgba(128, 99, 79, 0.12)",
+          light: "#F7F4EF", // page background
+          lightgray: "#DDD7D0", // borders, dividers
+          gray: "#9A928A", // muted text, graph nodes
+          darkgray: "#514C46", // body text
+          dark: "#292622", // headings, titles
+          secondary: "#80634F", // links, accents
+          tertiary: "#708B7E", // link hover, tags, visited graph nodes
+          highlight: "rgba(128, 99, 79, 0.12)", // internal-link background
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#522E38",
-          lightgray: "#E7CFBC",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(255, 255, 255, 0.15)",
+          light: "#522E38", // page background (burgundy)
+          lightgray: "#6E4452", // borders, dividers
+          gray: "#BFA0A8", // muted text, graph nodes
+          darkgray: "#F3E6DD", // body text
+          dark: "#FFF4EC", // headings, titles
+          secondary: "#F2B880", // links, accents (orange)
+          tertiary: "#E7CFBC", // link hover, sidebar text (beige)
+	  highlight: "rgba(245, 222, 179, 0.12)",
           textHighlight: "#b3aa0288",
         },
       },
@@ -92,4 +97,5 @@ const config: QuartzConfig = {
     ],
   },
 }
+
 export default config

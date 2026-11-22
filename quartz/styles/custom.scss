@@ -1,757 +1,670 @@
+
+// =============================================================================
+//  Anusha's Garden: custom.scss
+//
+//  Colours come from the palette in quartz.config.ts (--light, --lightgray,
+//  --gray, --darkgray, --dark, --secondary, --tertiary, --highlight).
+//  Do not hardcode hex values below. If you need a new colour, derive it from
+//  the palette (color-mix) or add it to the TOKENS section.
+//
+//  Sections
+//    1. Fonts
+//    2. Tokens
+//    3. Typography
+//    4. Links, quotes, code
+//    5. Callouts
+//    6. Sidebars (dark theme) + popovers
+//    7. Explorer, recent notes, page title
+//    8. Folder listing / post cards
+//    9. Ornaments (title branches, drop cap, graph frame)
+//   10. Misc
+//
+//  Note: component styles (explorer, search, page list...) are loaded AFTER
+//  this file, so rules that target component internals keep `!important`.
+//  Rules that only target base elements (h1-h6, body, code...) do not need it.
+// =============================================================================
+
 @use "./base.scss";
-@use "./variables.scss";
-// @use "./themes/index";
-/* greek-ext */
-@font-face {
-  font-family: "Arima";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/arima/v5/neIWzCqmt4Aup_qE1nFWqxI1RZX1YTAOrguP64kmfqO2VGg.woff2)
-    format("woff2");
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: "Arima";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/arima/v5/neIWzCqmt4Aup_qE1nFWqxI1RZX1YTAOoQuP64kmfqO2VGg.woff2)
-    format("woff2");
-  unicode-range:
-    U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* malayalam */
-@font-face {
-  font-family: "Arima";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/arima/v5/neIWzCqmt4Aup_qE1nFWqxI1RZX1YTAOuguP64kmfqO2VGg.woff2)
-    format("woff2");
-  unicode-range:
-    U+0307, U+0323, U+0951-0952, U+0964-0965, U+0D00-0D7F, U+1CDA, U+1CF2,
-    U+200C-200D, U+20B9, U+25CC, U+A830-A832;
-}
-/* tamil */
-@font-face {
-  font-family: "Arima";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/arima/v5/neIWzCqmt4Aup_qE1nFWqxI1RZX1YTAOtAuP64kmfqO2VGg.woff2)
-    format("woff2");
-  unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;
-}
-/* vietnamese */
-@font-face {
-  font-family: "Arima";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/arima/v5/neIWzCqmt4Aup_qE1nFWqxI1RZX1YTAOrQuP64kmfqO2VGg.woff2)
-    format("woff2");
-  unicode-range:
-    U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
-    U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
-    U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: "Arima";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/arima/v5/neIWzCqmt4Aup_qE1nFWqxI1RZX1YTAOrAuP64kmfqO2VGg.woff2)
-    format("woff2");
-  unicode-range:
-    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
-    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: "Arima";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/arima/v5/neIWzCqmt4Aup_qE1nFWqxI1RZX1YTAOoguP64kmfqO2.woff2)
-    format("woff2");
-  unicode-range:
-    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
-    U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw0aXp-p7K4KLjztg.woff2)
-    format("woff2");
-  unicode-range:
-    U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw9aXp-p7K4KLjztg.woff2)
-    format("woff2");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* vietnamese */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw2aXp-p7K4KLjztg.woff2)
-    format("woff2");
-  unicode-range:
-    U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
-    U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
-    U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXp-p7K4KLjztg.woff2)
-    format("woff2");
-  unicode-range:
-    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
-    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXp-p7K4KLg.woff2)
-    format("woff2");
-  unicode-range:
-    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
-    U+2215, U+FEFF, U+FFFD;
-}
+@use "./variables.scss" as *;
+
+// =============================================================================
+// 1. FONTS
+//    Arima, Montserrat and IBM Plex Mono are loaded by Quartz itself
+//    (theme.typography in quartz.config.ts). Only the extras live here.
+// =============================================================================
+
 @font-face {
   font-family: "Linux Libertine";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src:
     local("Linux Libertine"),
-    url("https://fonts.cdnfonts.com/s/282/LinLibertine_Re-4.1_.8_.woff")
-      format("woff");
+    url("https://fonts.cdnfonts.com/s/282/LinLibertine_Re-4.1_.8_.woff") format("woff");
 }
+
 @font-face {
   font-family: "Linux Libertine";
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src:
     local("Linux Libertine"),
-    url("https://fonts.cdnfonts.com/s/282/LinLibertine_It-4.0_.3_.woff")
-      format("woff");
+    url("https://fonts.cdnfonts.com/s/282/LinLibertine_It-4.0_.3_.woff") format("woff");
 }
+
 @font-face {
   font-family: "Linux Libertine";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src:
     local("Linux Libertine"),
-    url("https://fonts.cdnfonts.com/s/282/LinLibertine_Bd-4.0_.2_.woff")
-      format("woff");
+    url("https://fonts.cdnfonts.com/s/282/LinLibertine_Bd-4.0_.2_.woff") format("woff");
 }
+
 @font-face {
   font-family: "Linux Libertine";
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
   src:
     local("Linux Libertine"),
-    url("https://fonts.cdnfonts.com/s/282/LinLibertine_BI-4.0_.3_.woff")
-      format("woff");
+    url("https://fonts.cdnfonts.com/s/282/LinLibertine_BI-4.0_.3_.woff") format("woff");
 }
+
 @font-face {
-  font-family: "Linux Libertine C";
+  font-family: "VictorianDisplay";
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  src:
-    local("Linux Libertine C"),
-    url("https://fonts.cdnfonts.com/s/282/LinLibertineC_Re-4.0_.1_.woff")
-      format("woff");
-}
-:root[saved-theme="light"], html[saved-theme="light"] {
-  body {
-    font-family: 'Montserrat', sans-serif !important;
-    color: #E7CFBC;
-    font-size: 1.05rem;
-
-  }
-}
-.article-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  font-family: 'Arima', cursive;
-  text-align: center;
-  margin-bottom: 1rem;
+  src: url("/static/fonts/victorian-parlor-font/font.ttf") format("truetype");
 }
 
-:root[saved-theme="dark"], html[saved-theme="dark"] {
-    .article-title {
-    font-size: 2.25rem;
-    font-weight: 700;
-    font-family: 'Arima', cursive;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  body {
-    font-family: 'Montserrat', sans-serif !important;
-    color: #FFF4EC;
-    font-size: 1.05rem;
-
-  }
-
-  a.internal:hover {
-    transform: scale(1.03);
-    transition: all 0.2s ease;
-  }
-
-  a.internal {
-  background-color: rgba(245, 222, 179, 0.25); // warm beige
-  color: #f3d1d6;
+@font-face {
+  font-family: "DropCap";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/static/fonts/flora1-font/font.ttf") format("truetype");
 }
-  h3, h4, h5 , thead{
-    font-family: 'Arima', cursive !important;
-  }
-  h1, h2{
-    font-family: 'Arima', cursive !important;
-  }
-  h6 {
-    font-family: 'Arima', cursive !important;
-    font-variant: small-caps;
-    font-size: 1.15rem;
-    color: #e7cfbc; // Adjust this to match your palette
-    letter-spacing: 0.05em;
 
-  span.highlight {
-    color: #AEE3F5; // Light blue/cyan tint for emphasis
-    font-weight: 300;
-  }
+// =============================================================================
+// 2. TOKENS
+//    Light values on :root, dark overrides below. Everything else in this file
+//    reads these (or the Quartz palette) instead of hardcoded colours.
+// =============================================================================
+
+:root {
+  --font-classic: "Linux Libertine", Georgia, serif;
+  --font-victorian: "VictorianDisplay", serif;
+  --font-dropcap: "DropCap", serif;
+
+  // heading ramp: plain --dark in light mode
+  --heading-1: var(--dark);
+  --heading-2: var(--dark);
+  --heading-3: var(--dark);
+  --heading-4: var(--dark);
+  --heading-5: var(--dark);
+  --heading-6: var(--dark);
+
+  // decorative accent (drop cap, explorer icons)
+  --blush: var(--secondary);
+
+  // surfaces derived from the palette
+  --code-bg: color-mix(in srgb, var(--dark) 8%, transparent);
+  --pre-bg: color-mix(in srgb, var(--dark) 5%, transparent);
+  --surface-border: color-mix(in srgb, var(--dark) 20%, transparent);
+  --quote-bg: color-mix(in srgb, var(--secondary) 8%, transparent);
+}
+
+:root[saved-theme="dark"] {
+  // heading ramp: orange > rose > lilac
+  --heading-1: var(--secondary);
+  --heading-2: #c98686;
+  --heading-3: #c8a5c8;
+  --heading-4: #bfa5c7;
+  --heading-5: #9e8eb8;
+  --heading-6: var(--tertiary);
+
+  --blush: #e3b09a;
+
+  --pre-bg: color-mix(in srgb, black 20%, transparent);
+}
+
+// =============================================================================
+// 3. TYPOGRAPHY
+//    Body font is --bodyFont (Montserrat) and headings use --headerFont
+//    (Arima), both set from quartz.config.ts, so no font-family overrides here.
+// =============================================================================
+
+body {
+  font-size: 1.05rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--heading-1);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--heading-2);
+}
+
+h3,
+thead {
+  color: var(--heading-3);
+}
+
+h4 {
+  color: var(--heading-4);
+}
+
+h5 {
+  color: var(--heading-5);
+}
+
+h6 {
+  color: var(--heading-6);
+  font-variant: small-caps;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
 
   &::first-letter {
     font-size: 1.2em;
     text-transform: uppercase;
   }
+
+  span.highlight {
+    color: #aee3f5; // pale cyan emphasis inside h6
+    font-weight: 300;
+  }
 }
 
-  h1 { 
-    color: #F2B880;
-    font-size:1.8rem; }
-  h2 { color: #C98686;
-    font-size: 1.5rem;}
-  h3, thead{ color: rgb(200, 165, 200); }
-  h4 { color: rgb(191, 165, 199); }
-  h5 { color: rgb(158, 142, 184); }
-  // h6 { color: rgb(156, 156, 190); }
+// =============================================================================
+// 4. LINKS, QUOTES, CODE
+// =============================================================================
 
- 
+// internal links: colour and tint come from --secondary / --highlight (base.scss)
 
+blockquote {
+  background-color: var(--quote-bg);
+  border-radius: 6px;
+  margin: 0.25rem 0 1rem 0;
+  // border-left colour comes from base.scss (--secondary)
 }
 
-
-// CALLOUTS
-
-:root {
-  --color-blue-rgb: 37, 99, 235;
-  --color-orange-rgb: 245, 158, 11;
-  --color-red-rgb: 239, 68, 68;
-  --color-green-rgb: 34, 197, 94;
-  --color-cyan-rgb: 6, 182, 212;
-  --color-purple-rgb: 168, 85, 247;
-  --color-pink-rgb: 236, 72, 153;
-  --highlight-mix-blend-mode: normal;
-  --radius-s: 6px;
-  --font-weight: 500;
-  --bold-modifier: 200;
+code {
+  background-color: var(--code-bg);
+  padding: 0.2rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
 }
-.callout {
-  --callout-border-width: 1px;
-  --callout-radius: 8px;
-  --callout-title-size: 1.05rem;
-  --callout-title-weight: 600;
-  --callout-title-color: inherit;
 
-  border: var(--callout-border-width) solid rgba(var(--callout-color), 0.35);
-  background-color: rgba(var(--callout-color), 0.15); // soft transparent bg
-  border-radius: var(--callout-radius);
+pre {
+  background-color: var(--pre-bg);
+  color: var(--darkgray);
+  padding: 1rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+// =============================================================================
+// 5. CALLOUTS
+//    callouts.scss (stock) draws the box from --color / --border / --bg.
+//    We only choose the colour per type and derive border and background from
+//    it, so every type behaves the same.
+// =============================================================================
+
+$callout-colors: (
+  "abstract": var(--tertiary),
+  "info": var(--darkgray),
+  "todo": #4f86e8,
+  "tip": #2ebfc9,
+  "success": #3fb27f,
+  "question": #e3a63c,
+  "warning": #e58a3a,
+  "failure": #d95c5c,
+  "danger": #d95c5c,
+  "bug": #d8639c,
+  "example": #9b72d9,
+  "quote": var(--tertiary),
+  "theorem": var(--gray),
+);
+
+.callout[data-callout] {
+  --color: var(--secondary); // default / "note"
+  --border: color-mix(in srgb, var(--color) 35%, transparent);
+  --bg: color-mix(in srgb, var(--color) 15%, transparent);
+
+  border-radius: 8px;
   padding: 0.75rem 1rem;
   margin: 1rem 0;
 }
 
-.callout-title-inner p {
-  font-size: var(--callout-title-size);
-  font-weight: var(--callout-title-weight);
-  margin: 0 0 0.5rem 0;
-  color: var(--callout-title-color);
+@each $name, $color in $callout-colors {
+  .callout[data-callout="#{$name}"] {
+    --color: #{$color};
+  }
 }
 
-
-/* Variants */
-.callout[data-callout="info"]       { --callout-color: 255, 255, 255; }
-.callout[data-callout="warning"]    { --callout-color: var(--color-orange-rgb); }
-.callout[data-callout="tip"]        { --callout-color: var(--color-cyan-rgb); }
-.callout[data-callout="danger"]     { --callout-color: var(--color-red-rgb); }
-.callout[data-callout="success"]    { --callout-color: var(--color-green-rgb); }
-.callout[data-callout="question"]   { --callout-color: var(--color-orange-rgb); }
-.callout[data-callout="quote"]      { --callout-color: 210, 180, 140; }
-.callout[data-callout="abstract"]   { --callout-color: 61, 34, 42; }
-.callout[data-callout="summary"]    { --callout-color: var(--color-cyan-rgb); }
-.callout[data-callout="todo"]       { --callout-color: var(--color-blue-rgb); }
-.callout[data-callout="example"]    { --callout-color: var(--color-purple-rgb); }
-.callout[data-callout="fail"]       { --callout-color: var(--color-red-rgb); }
-.callout[data-callout="important"]  { --callout-color: var(--color-cyan-rgb); }
-.callout[data-callout="bug"]        { --callout-color: var(--color-pink-rgb); }
-.callout[data-callout="theorem"]    { --callout-color: 193 193 193; }
-
-
-/* Fix for popover preview box in dark mode */
-:root[saved-theme="dark"] .popover {
-  background-color: rgba(82, 46, 56, 0.925) !important;  /* match your background */
-  color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+.callout .callout-title > .callout-title-inner > p {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
 }
+
+// dark mode: neutral title text, icon keeps the type colour
+:root[saved-theme="dark"] .callout .callout-title > .callout-title-inner > p {
+  color: var(--dark);
+}
+
+// =============================================================================
+// 6. SIDEBARS (dark theme) + POPOVERS
+// =============================================================================
 
 :root[saved-theme="dark"] {
+  // text selection
+  ::selection {
+    background: color-mix(in srgb, var(--secondary) 25%, transparent);
+    color: var(--dark);
+  }
+
+  // left sidebar: slightly darker than the page
+  .left.sidebar {
+    background-color: color-mix(in srgb, var(--light) 82%, black) !important;
+  }
+
+  // right sidebar: darker still, slightly translucent so the stars show through
+  .right.sidebar {
+    background-color: color-mix(
+      in srgb,
+      color-mix(in srgb, var(--light) 70%, black) 86%,
+      transparent
+    ) !important;
+    color: var(--darkgray);
+
+    h3 {
+      color: var(--secondary);
+    }
+
+    a {
+      color: var(--tertiary);
+      font-family: var(--headerFont) !important;
+
+      &:hover {
+        color: var(--dark);
+      }
+    }
+  }
+
+  // left sidebar text
   .sidebar .site-title,
   .sidebar .sidebar-header,
   .sidebar .folder-title,
-  .sidebar .explorer-item{
-    color: #E7CFBC !important;
+  .sidebar .explorer-item,
+  h2.page-title a {
+    color: var(--tertiary) !important;
   }
-  .callout-title p {
-  font-weight: 700 !important;
-  font-size: 1rem;
-  line-height: 1.4;
-  margin-bottom: 0.3rem;
-  color: #faebd7 !important;
-  }
-  .callout-title .callout-icon {
-  color: #f5d8b8 !important; /* Soft warm beige */
-  }
-}
 
-// LEFT SIDEBAR PAGE TITLE
-:root[saved-theme="dark"] {
-  h2.page-title a{
-    color : #E7CFBC !important
-  }
+  // toolbar icons (darkmode / reader mode)
   .darkmode svg,
   .readermode svg {
-    color: #F2B880  !important;
-    stroke: #F2B880  !important;
-    fill: #F2B880  !important;
-  }
-}
-// ===========================
-// LEFT SIDEBAR
-// ===========================
-
-:root[saved-theme="dark"] {
-  .folder-icon {
-    stroke: #F2B880 !important;
+    color: var(--secondary) !important;
+    stroke: var(--secondary) !important;
+    fill: var(--secondary) !important;
   }
 
-  .explorer .title-button h2 {
-    color: #F2B880 !important;
-  }
-
+  // search box
   .search {
-    background-color: #e7cfbc1f;
+    background-color: color-mix(in srgb, var(--tertiary) 12%, transparent);
     padding: 0.3rem;
     border-radius: 8px;
-    border: 1px solid #f2b78041;
+    border: 1px solid color-mix(in srgb, var(--secondary) 25%, transparent);
   }
 
   .search-bar {
     background-color: transparent;
     border: none;
-    color: #f2b78041;
+    color: var(--darkgray);
     width: 100%;
     font-size: 1rem;
     outline: none;
-  }
 
-  .search-bar::placeholder {
-    color: #aaa;
-  }
-
-  .left.sidebar {
-    background-color: #472932 !important;
+    &::placeholder {
+      color: var(--gray);
+    }
   }
 }
 
-// RIGHT SIDEBAR
-
-/* Right Sidebar Font Color (Dark Mode) */
-:root[saved-theme="dark"], html[saved-theme="dark"] {
-  .right.sidebar {
-    color: #f2d5da; /* soft pinkish-white or choose your preferred color */
-    background-color: #3a2027dc !important; 
-  }
-
-  .right.sidebar h3 {
-    color: #F2B880; /* title headings like "Graph View", "Table of Contents" */
-  }
-
-  .right.sidebar a {
-    color: #E7CFBC; /* link text color */
-    font-family: 'Arima', sans-serif !important;
-  }
-
-  .right.sidebar a:hover {
-    color: #fff; /* hover effect */
-  }
-  // code, .code, .inline-code {
-  // background-color: #f5deb3a8;
-  // color: #3b2f2f;            // dark text for good contrast
-  // }
-  ::selection {
-    background: #f2b7803f;
-    color: #ffffff;
-  }
-
-  ::-moz-selection {
-    background: #f2b7803f;
-    color: #ffffff;
-  }
-
-}
-
-.center {
-  animation: fadeIn 0.4s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.page p {
-  white-space: pre-line !important;
-}
-/* If you want inline code (`like this`) to be different */
-code {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 0.2rem 0.2rem;
-  border-radius: 4px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.85rem;
-}
-
-pre {
-  background-color: rgba(0, 0, 0, 0.2);  /* subtle contrast from page */
-  color: #f8f8f2;  /* light text for readability */
+// popover previews (both themes)
+.popover {
+  background-color: color-mix(in srgb, var(--light) 92.5%, transparent) !important;
+  color: var(--dark) !important;
+  border: 1px solid var(--surface-border);
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);  /* soft border */
-  border-radius: 6px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.9rem;
-  overflow-x: auto;
-  line-height: 1.5;
-}
-blockquote {
-  // font-family:  "Linux Libertine" !important;
-  background-color: rgba(250, 222, 201, 0.08); // warm beige translucent
-  border-left: 3px solid #f4bc9c;              // muted orange-pink
-  //  padding: 0.1rem 0.1rem;
-  border-radius: 6px;
-  margin: 0.25rem 0 1rem 0; // ↓ top | right | bottom | left
-  color: #f0e7e2; // slightly warmer than pure white
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Hide "X items under this folder" text on folder index pages */
-[data-slug$="/index"] .page-listing > p {
-  display: none !important;
-}
-/* Change font for file names inside folder tree */
-.explorer a {
-  font-family: 'Linux Libertine', sans-serif !important;
-  font-size: 1rem; /* adjust if needed */
-}
-.folder-title {
-  font-size: 1.2rem !important; /* adjust this value as you like */
-  font-weight: 600;   /* optional for better emphasis */
-}
-
-.recent-notes {
-  margin-top: 1.2rem;
-}
-
-.recent-notes h3 {
-  font-size: 1.05rem !important;
-  margin-bottom: 0.7rem;
-}
-
-.recent-notes .recent-ul {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.recent-notes .recent-li {
-  margin: 0 0 0.8rem 0 !important;
-  padding: 0 !important;
-}
-
-.recent-notes .section {
-  font-family: 'Linux Libertine', sans-serif !important;
-  font-size: 1.95rem !important;
-  line-height: 1.2 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.recent-notes .meta {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 0.9rem !important;
-  line-height: 1 !important;
-  margin: 0.15rem 0 0 0 !important;
-  opacity: 0.7;
-}
-/* Hide Recent Posts completely in Reader Mode */
-:root[reader-mode="on"] .recent-notes {
-  display: none !important;
-}
-/* Narrower left sidebar */
-@media all and (min-width: 800px) {
+// sidebar widths
+@media all and not ($mobile) {
   .left.sidebar {
     width: 290px !important;
   }
 }
-@media all and (min-width: 800px) {
+
+@media all and ($desktop) {
   .right.sidebar {
-   width: 280px !important;
+    width: 280px !important;
     margin-left: 30px !important;
   }
 }
 
-// folder index
+// =============================================================================
+// 7. EXPLORER, RECENT NOTES, PAGE TITLE
+// =============================================================================
 
+// site title in the left sidebar
+.left.sidebar .page-title,
+.left.sidebar .page-title a {
+  font-family: var(--font-victorian) !important;
+  font-size: 2.75rem;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
 
+// explorer
+.explorer a {
+  font-family: var(--font-classic) !important;
+  font-size: 1rem;
+}
 
-/* =========================================
-   LITERARY ARCHIVE — TWO COLUMN EDITION
-   ========================================= */
+.folder-title {
+  font-size: 1.2rem !important;
+  font-weight: 600;
+}
 
-/* Main two-column grid */
+.left.sidebar .explorer .title-button h2 {
+  font-family: var(--font-victorian) !important;
+}
+
+:root[saved-theme="dark"] .left.sidebar .explorer {
+  .title-button h2 {
+    color: var(--secondary) !important;
+  }
+
+  a {
+    color: var(--tertiary) !important;
+  }
+
+  svg {
+    color: var(--blush);
+  }
+
+  // botanical twig replaces the folder arrows (their space is preserved)
+  .folder-icon {
+    visibility: hidden !important;
+  }
+
+  .explorer-content {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -13px;
+      top: 2px;
+      width: 40px;
+      height: 100%;
+      background: url("/static/images/twig2.png") no-repeat center top / 100% 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    a {
+      display: inline-block;
+      transition: transform 0.22s ease;
+
+      &:hover {
+        transform: translateX(6px);
+      }
+    }
+  }
+}
+
+// recent notes
+.recent-notes {
+  margin-top: 1.2rem;
+
+  h3 {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.7rem;
+  }
+
+  .recent-ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .recent-li {
+    margin: 0 0 0.8rem 0 !important;
+    padding: 0 !important;
+  }
+
+  .section {
+    font-family: var(--font-classic) !important;
+    font-size: 1.95rem !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .meta {
+    font-family: var(--bodyFont) !important;
+    font-size: 0.9rem !important;
+    line-height: 1 !important;
+    margin: 0.15rem 0 0 0 !important;
+    opacity: 0.7;
+  }
+}
+
+:root[reader-mode="on"] .recent-notes {
+  display: none !important;
+}
+
+// =============================================================================
+// 8. FOLDER LISTING / POST CARDS
+// =============================================================================
+
+// "X items under this folder" line on folder index pages
+[data-slug$="/index"] .page-listing > p {
+  display: none !important;
+}
+
+// two-column grid
 .page-listing ul.section-ul {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   column-gap: 3.5rem !important;
   row-gap: 2.5rem !important;
-
   margin: 2rem 0 !important;
   padding: 0 !important;
   border: none !important;
-}
 
-/* Individual entries */
-.page-listing ul.section-ul > li.section-li {
-  display: block !important;
-  min-width: 0;
-  margin: 0 !important;
-  padding: 0 !important;
-
-  border: none !important;
-  background: transparent !important;
-  list-style: none !important;
-}
-
-/* Entry content */
-.page-listing ul.section-ul > li.section-li > .section {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  gap: 0.5rem !important;
-}
-
-/* Date */
-.page-listing .section > p.meta {
-  order: 1;
-  margin: 0 !important;
-  font-size: 0.78rem;
-  color: var(--white);
-  opacity: 0.8;
-}
-
-/* Title */
-.page-listing .section > .desc {
-  order: 2;
-  margin: 0;
-}
-
-.page-listing .section > .desc h3 {
-  margin: 0 !important;
-  font-family: var(--headerFont);
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-.page-listing .section > .desc h3 a {
-  color: var(--dark);
-  text-decoration: none;
-  background: none;
-  transition: color 0.2s ease;
-}
-
-.page-listing .section > .desc h3 a:hover {
-  color: var(--secondary);
-}
-
-/* Tags — inline horizontal row */
-.page-listing .section > ul.tags {
-  order: 3;
-
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: wrap !important;
-  justify-content: flex-start !important;
-  align-items: center !important;
-
-  gap: 0.1rem 0.8rem !important;
-  width: 100%;
-  margin: 0.25rem 0 0 !important;
-  padding: 0 !important;
-  list-style: none !important;
-}
-
-.page-listing .section > ul.tags > li {
-  display: inline-block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  list-style: none !important;
-}
-
-.page-listing .section > ul.tags .tag-link {
-  display: inline !important;
-  padding: 0 !important;
-  margin: 0 !important;
-
-  background: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-
-  color: var(--tertiary);
-  font-size: 0.86rem;
-  text-decoration: none;
-}
-
-.page-listing .section > ul.tags .tag-link::before {
-  content: "#";
-}
-
-.page-listing .section > ul.tags .tag-link:hover {
-  text-decoration: underline;
-}
-
-
-
-/* Responsive */
-@media (max-width: 750px) {
-  .page-listing ul.section-ul {
+  @media all and ($mobile) {
     grid-template-columns: 1fr !important;
     row-gap: 2rem !important;
   }
 }
 
-/* Victorian post frames */
+// each entry is a framed "Victorian" card
 .page-listing ul.section-ul > li.section-li {
   position: relative !important;
+  display: block !important;
   isolation: isolate;
-
-  min-height: 340px;
   box-sizing: border-box;
-
-  padding: 7.2rem 3.8rem !important;
+  min-width: 0;
+  min-height: 340px;
   margin: 0 !important;
-
+  padding: 7.2rem 3.8rem !important;
   border: none !important;
   background: transparent !important;
-}
+  list-style: none !important;
+  transform-origin: center center;
+  transition: transform 0.25s ease !important;
 
-.page-listing ul.section-ul > li.section-li::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/static/images/vintage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 114% 80%;
+    opacity: 0.8;
+    pointer-events: none;
+  }
 
-  background-image: url("/static/images/vintage.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 114% 80%;
+  &:hover {
+    transform: scale(1.04) !important;
+    z-index: 5;
+  }
 
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-/* Keep post content inside the safe area */
-.page-listing ul.section-ul > li.section-li > .section {
-  position: relative;
-  z-index: 1;
-}
-
-/* Improve spacing between post elements */
-.page-listing .section .desc {
-  margin-bottom: 1.5rem;
-}
-
-.page-listing .section .meta {
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 750px) {
-  .page-listing ul.section-ul > li.section-li {
+  @media all and ($mobile) {
     min-height: 230px;
     padding: 3.5rem 2.8rem !important;
   }
+
+  // entry content
+  > .section {
+    position: relative;
+    z-index: 1;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
 }
 
-.page-listing ul.section-ul > li.section-li,
-.page-listing ul.section-ul > li.section-li > .section {
-  transform: none !important;
-  translate: none !important;
-  scale: none !important;
+// date
+.page-listing .section > p.meta {
+  order: 1;
+  margin: 0 0 1rem !important;
+  font-size: 0.78rem;
+  color: var(--gray);
 }
 
-.page-listing ul.section-ul > li.section-li:hover,
-.page-listing ul.section-ul > li.section-li:hover > .section {
-  transform: none !important;
-  translate: none !important;
-  scale: none !important;
-  transition: none !important;
+// title
+.page-listing .section > .desc {
+  order: 2;
+  margin: 0 0 1.5rem;
+
+  h3 {
+    margin: 0 !important;
+    font-family: var(--headerFont);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+
+    a {
+      color: var(--dark);
+      text-decoration: none;
+      background: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
 }
 
-@font-face {
-  font-family: "VictorianDisplay";
-  src: url("/static/fonts/victorian-parlor-font/font.ttf") format("truetype");
+// tags: one inline row
+.page-listing .section > ul.tags {
+  order: 3;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 0.1rem 0.8rem !important;
+  width: 100%;
+  margin: 0.25rem 0 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+
+  > li {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .tag-link {
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    color: var(--tertiary);
+    font-size: 0.86rem;
+    text-decoration: none;
+
+    &::before {
+      content: "#";
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// =============================================================================
+// 9. ORNAMENTS
+// =============================================================================
+
+// botanical branches flanking the article title
+h1.article-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1 1 0;
+    min-width: 5rem;
+    height: 5rem;
+    background-image: url("/static/images/ornament.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+  }
+}
+
+// drop cap on the homepage
+body[data-slug="index"] .popover-hint p:first-of-type::first-letter {
+  float: left !important;
+  position: static !important;
+  font-family: var(--font-dropcap) !important;
+  font-size: 4.5rem !important;
   font-weight: normal;
-  font-style: normal;
+  line-height: 0.2em !important;
+  margin: 0.04em 0.1em 0 0 !important;
+  padding: 0 !important;
+  color: var(--blush);
 }
 
-/* Victorian font for the website title */
-:root[saved-theme="dark"] .left.sidebar h2.page-title,
-:root[saved-theme="dark"] .left.sidebar h2.page-title a,
-.left.sidebar .page-title,
-.left.sidebar .page-title a {
-  font-family: "VictorianDisplay", serif !important;
-  font-size: 2.75rem;
-  font-weight: 400 !important;
-  font-style: normal !important;
-}
-/* =========================================
-   VICTORIAN EXPLORER PANEL
-   =========================================
-
-/* Antique frame around Graph View */
+// antique frame around the graph view
 .right.sidebar .graph {
   position: relative;
   isolation: isolate;
@@ -762,135 +675,51 @@ blockquote {
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-}
 
-.right.sidebar .graph::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: url("/static/images/border.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 105% 73%;
-  opacity: 0.7;
-  pointer-events: none;
-}
-/* Explorer heading */
-.left.sidebar .explorer .title-button h2 {
-  font-family: "VictorianDisplay", serif !important;
-  color: #F2B880 !important;
-}
-
-/* Folder names */
-.left.sidebar .explorer a {
-  color: #E7CFBC !important;
-}
-
-/* Folder icons */
-.left.sidebar .explorer svg {
-  color: #D9A99C;
-}
-
-/* Remove Quartz's original Graph View box */
-.right.sidebar .graph > .graph-outer {
-  border: none !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-/* Floral ornaments around the welcome heading */
-/* Floral branches beside the page title */
-/* Botanical branches flanking the page title */
-h1.article-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  text-align: center;
-}
-
-h1.article-title::before,
-h1.article-title::after {
-  content: "";
-  flex: 1 1 0;
-  min-width: 5rem;
-  height: 5rem;
-  background-image: url("/static/images/ornament.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% auto;
-}
-
-
-@font-face {
-  font-family: "DropCap";
-  src: url("/static/fonts/flora1-font/font.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-/* Victorian drop cap — homepage only */
-/* Victorian drop cap */
-body[data-slug="index"] .popover-hint p:first-of-type::first-letter {
-  float: left !important;
-  font-family: "DropCap", serif !important;
-  font-size: 4.5rem !important;
-  line-height: 0.2em !important;
-  margin: 0.04em 0.10em 0 0 !important;
-  padding: 0 !important;
-  color: #e7b99f;
-  font-weight: normal;
-  position: static !important;
-}
-/* Vertical botanical twig */
-/* Vertical botanical twig beside Explorer folders */
-:root[saved-theme="dark"] .left.sidebar .explorer {
-  .explorer-content {
-    position: relative;
-  }
-
-  /* Hide the original folder arrows, but preserve their space */
-  .folder-icon {
-    visibility: hidden !important;
-  }
-
-  /* One continuous twig */
-  .explorer-content::before {
+  &::before {
     content: "";
     position: absolute;
-    left: -13px;
-    top: 2px;
-    width: 40px;
-    height: calc(100%);
-    background-image: url("/static/images/twig2.png");
-    background-position: center;
-    pointer-events: none;
-    z-index: 2;
+    inset: 0;
+    z-index: -1;
+    background-image: url("/static/images/border.png");
     background-repeat: no-repeat;
-background-size: 100% 100%;
-background-position: center top;
-  }
-}
-/* Gentle folder hover movement */
-:root[saved-theme="dark"] .left.sidebar .explorer {
-
-  .explorer-content a {
-    display: inline-block;
-    transition: transform 0.22s ease;
+    background-position: center;
+    background-size: 105% 73%;
+    opacity: 0.7;
+    pointer-events: none;
   }
 
-  .explorer-content a:hover {
-    transform: translateX(6px);
+  // remove Quartz's own graph box
+  > .graph-outer {
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
   }
 }
-/* Gentle enlargement of Victorian post cards */
-.page-listing ul.section-ul > li.section-li {
-  transition: transform 0.25s ease !important;
-  transform-origin: center center;
+
+// =============================================================================
+// 10. MISC
+// =============================================================================
+
+.center {
+  animation: fadeIn 0.4s ease-in;
 }
 
-.page-listing ul.section-ul > li.section-li:hover {
-  transform: scale(1.04) !important;
-  z-index: 5;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// keep single line breaks in paragraphs
+.page p {
+  white-space: pre-line !important;
+}
+
+:root[saved-theme="dark"] .recent-notes h3 {
+  color: var(--secondary);
 }

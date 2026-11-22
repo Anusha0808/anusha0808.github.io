@@ -39,14 +39,14 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
     if (options.showReadingTime) {
       const { minutes } = readingTime(text)
-      segments.push(<span>{`${Math.ceil(minutes)} min read`}</span>)
+      segments.push(<span>{` ☀︎ ${Math.ceil(minutes)} min read`}</span>)
     }
 
     return (
       <div class={classNames(displayClass, "content-meta")}>
-        <div style="font-size: 0.8em; color: var(--gray); margin-bottom: 0.25rem;">
-          Last modified
-        </div>
+        <h3 class="last-modified-label">
+  	Last modified
+	</h3>
         <p>{segments}</p>
       </div>
     )
