@@ -18,4 +18,3 @@ Wednesday 1045 - 1245 Tutorial
 - [[class 4]]
 - [[class 5]]
 - [[class 7]]
-
