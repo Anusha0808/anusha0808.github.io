@@ -1,55 +1,55 @@
-import { Date, getDate } from "./Date"
-import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
+
 import readingTime from "reading-time"
 import { classNames } from "../util/lang"
-import { i18n } from "../i18n"
+import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { JSX } from "preact"
 import style from "./styles/contentMeta.scss"
 
 interface ContentMetaOptions {
-  /**
-   * Whether to display reading time
-   */
   showReadingTime: boolean
-  showComma: boolean
 }
 
 const defaultOptions: ContentMetaOptions = {
   showReadingTime: true,
-  showComma: true,
 }
 
 export default ((opts?: Partial<ContentMetaOptions>) => {
-  // Merge options with defaults
   const options: ContentMetaOptions = { ...defaultOptions, ...opts }
 
   function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
     const text = fileData.text
 
-    if (text) {
-      const segments: (string | JSX.Element)[] = []
+    if (!text) return null
 
-      if (fileData.dates) {
-        segments.push(<Date date={getDate(cfg, fileData)!} locale={cfg.locale} />)
-      }
+    const modifiedDate = fileData.dates?.modified
 
-      // Display reading time if enabled
-      if (options.showReadingTime) {
-        const { minutes, words: _words } = readingTime(text)
-        const displayedTime = i18n(cfg.locale).components.contentMeta.readingTime({
-          minutes: Math.ceil(minutes),
-        })
-        segments.push(<span>{displayedTime}</span>)
-      }
+    const segments: (string | JSX.Element)[] = []
 
-      return (
-        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
-          {segments}
-        </p>
+    if (modifiedDate) {
+      segments.push(
+        <span>
+          {new Date(modifiedDate).toLocaleDateString(cfg.locale, {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+        </span>,
       )
-    } else {
-      return null
     }
+
+    if (options.showReadingTime) {
+      const { minutes } = readingTime(text)
+      segments.push(<span>{`${Math.ceil(minutes)} min read`}</span>)
+    }
+
+    return (
+      <div class={classNames(displayClass, "content-meta")}>
+        <div style="font-size: 0.8em; color: var(--gray); margin-bottom: 0.25rem;">
+          Last modified
+        </div>
+        <p>{segments}</p>
+      </div>
+    )
   }
 
   ContentMetadata.css = style
