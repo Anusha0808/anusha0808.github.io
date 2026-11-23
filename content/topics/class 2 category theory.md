@@ -8,73 +8,71 @@ tags:
   - explorerexclude
 date: 14 September 2026
 ---
-
 # Class 2
-## commutative diagrams
-meaning:
-diagrams have no loops
-any two paths of length atleast 2 give equations with the same end points
 
+## Commutative diagrams
 
-## definitions covered
-### categorical product
-Let C be a category. Let A,B be objects in C. 
-Product iff A and B is given by the following
-- an object $(A \times B) \in Ob(C)$
-- a pair of morphisms $\pi_1: A \times B \rightarrow A$ and $\pi_2$ called projections
+Meaning: diagrams have no loops; any two paths of length at least 2 between the same two objects give equal composite morphisms.
 
-such that for any object X in C and morphisms $f: X \rightarrow A$ and $a: X \rightarrow B$, there exists a **unique** morphisms written $<f,g>: X \rightarrow A\times B$ such that the diagram commutes
+## Categorical product
 
+> [!definition] Product
+> 
+> Let $\mathcal{C}$ be a category and $A, B \in \operatorname{Ob}(\mathcal{C})$. A **product** of $A$ and $B$ is given by:
+> 
+> - an object $A \times B \in \operatorname{Ob}(\mathcal{C})$
+> - a pair of morphisms $\pi_1 : A \times B \to A$, $\pi_2 : A \times B \to B$, called **projections**
+> 
+> such that for every object $X$ and morphisms $f : X \to A$, $g : X \to B$, there exists a **unique** morphism $\langle f, g\rangle : X \to A \times B$ making the diagram commute.
 
->doubt: 
- are we implying that C is closed under product or are we introducing products 
-ans : we are saying if the product exists in C, then it is something like this
-but then it is possible to define product for any two objects? why not make C closed under products?
-(ask him)
-oh then maybe its like if a category is closed under  
-since we have the definition of product, what is stopping us from making the definition of category closed under product? in which cases the product may not be defined? the morphisms from the product to some other object could just be empty
-> Answer : the definition is an iff of product. it means , if a product exists, it must satisfy the following conditions, and vice a versa
+**Doubt.** Are we saying $\mathcal{C}$ is _closed under_ products, or just defining what a product _is_, when one happens to exist?
 
-products are commutative (upto isomorphism) and product exists iff both directions product exists.
-#### Examples:
-1) Set : categorical product is the cartesian product
-2) vector spaces : the direct sum
-3) Category of posets and monotonr functions
+**Answer.** The definition is an "iff": _if_ a product exists, it satisfies these conditions, and vice versa. It doesn't force $\mathcal{C}$ to have all products — the morphisms from the product to some other object could simply fail to exist.
 
-#### prop: $<\pi_1, \pi_2> = id_{A\times B}$
-$<\pi_1, \pi_2> = id_{A\times B}$
+Products are commutative up to isomorphism, and the product $A \times B$ exists iff it exists "in both directions" (the universal property holds symmetrically in $A,B$).
 
-#### prop : distributivity
-Let $A \leftarrow^{\pi_1} A \times B \rightarrow^{\pi_2} B$ be a product. Let X be an object, $f: X \rightarrow A, g : X -> B$ morphisms. Let Y ba an object and $h: Y -> X$. Show that $<f \circ g> \circ h = <f \circ h, g \circ h>$
+_Examples._
 
-Proof.
-Here the uniqueness of the morphism of the product is crucial.
+1. $\mathbf{Set}$: categorical product = Cartesian product
+2. Vector spaces: categorical product = direct sum
+3. $\mathbf{Pos}$ (posets and monotone functions)
 
-#### prop : uniqueness of product upto isomorphism
-$A \leftarrow^{\pi_1} A \times B \rightarrow^{\pi_2} B , A \leftarrow^{t_1} X \rightarrow^{t_2} B$ are categorical products of A and B. Prove that there exists an isomorphism $i : X \rightarrow A \times B$. and that there is a unique isomorphism such that $\pi_i \circ i = t_i$
+**Proposition.** $\langle \pi_1, \pi_2 \rangle = \operatorname{id}_{A \times B}$
+
+**Proposition (distributivity).** Let $A \xleftarrow{\pi_1} A\times B \xrightarrow{\pi_2} B$ be a product, $X$ an object with $f: X \to A$, $g : X \to B$, and $Y$ an object with $h : Y \to X$. Show that $$\langle f, g\rangle \circ h = \langle f \circ h,\ g \circ h\rangle$$
+
+**Proof.** The uniqueness part of the universal property of the product is the crucial ingredient: both sides, post-composed with $\pi_1$ and $\pi_2$, agree, so by uniqueness of the mediating morphism they must be equal.
+
+**Proposition (uniqueness of products up to isomorphism).** Let $A \xleftarrow{\pi_1} A \times B \xrightarrow{\pi_2} B$ and $A \xleftarrow{t_1} X \xrightarrow{t_2} B$ both be products of $A$ and $B$. Then there exists an isomorphism $i : X \to A \times B$, unique such that $\pi_i \circ i = t_i$.
 
 ## Terminal objects
-A category C has a terminal object ( sometimes called the final object) if there exists $1 \in Ob(C)$, such that for any object $X$, there exists a unique morphism from X into $1$. We write $1_X: X \rightarrow 1$ or $!_X$
-### Examples:
-In sets, any singleton is terminal
-Counter example : The empty category has no objects and no morphisms. This does not have any terminal object bec it does not have any object
 
-### Prop : any two terminal objects are isomorphic to each other.
+> [!definition] Terminal object
+> 
+> A category $\mathcal{C}$ has a **terminal object** (or _final object_) if there is $1 \in \operatorname{Ob}(\mathcal{C})$ such that for every object $X$, there is a unique morphism $!_X : X \to 1$ (also written $1_X$).
+
+_Examples._
+
+- In $\mathbf{Set}$, any singleton is terminal.
+- _Counterexample:_ the empty category has no objects at all, so it has no terminal object either.
+
+**Proposition.** Any two terminal objects are isomorphic.
 
 ## Finite products
-We say that a category C has finite products ( or that it is a **cartesian**) if it has a terminal object $1$ and for every pair of objects A and B, it contains the binary product of A and B
 
-https://ncatlab.org/nlab/show/generalized+the cool stuff
+**Definition (cartesian category).** $\mathcal{C}$ **has finite products** (is _cartesian_) if it has a terminal object $1$ and, for every pair of objects $A,B$, their binary product $A \times B$.
 
-### Examples:
-the empty category has finite products. but no terminal object.
-vec also has finite products. terminal object : 0 dimensional vector space.
+_(See also: nLab, generalized products/limits — paste the full link here.)_
 
-### Prop : terminal object acts as identity in product.
-Let C be a category with finite product. Show that $1 \times A \cong A$
-Proof. 
+_Examples._
 
-## we get functors here.
-did not write the notes here. fill this up.
-### prop : 
-show that
+- The empty category has finite products vacuously (it has no objects to take products of), but no terminal object.
+- $\mathbf{Vec}$ has finite products; its terminal object is the $0$-dimensional vector space.
+
+**Proposition (terminal object as identity for product).** Let $\mathcal{C}$ have finite products. Show that $1 \times A \cong A$.
+
+**Proof.** _(to fill in)_
+
+## Functors
+
+_(Didn't write notes for this section in class — fill in, including the proposition that was being set up.)_

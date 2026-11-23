@@ -10,152 +10,114 @@ date: 7 September 2026
 ---
 ## Definitions
 
-**Def:** A _category_ C consists of the following data:
+> [!definition] Category
+> 
+> A **category** $\mathcal{C}$ consists of the following data:
+> 
+> - a collection of objects $\mathcal{C}_o$
+> - for any pair of objects $A$ and $B$, a collection of morphisms $\mathcal{C}_m(A,B)$
+> - for any morphism $f \in \mathcal{C}_m(A,B)$ and any morphism $g \in \mathcal{C}_m(B,C)$, a morphism $(g \odot f) \in \mathcal{C}_m(A,C)$, called the _composition_ of $g$ and $f$
+> - for any object $A$, an identity morphism $\operatorname{id}_A \in \mathcal{C}_m(A,A)$
+> 
+> such that:
+> 
+> - composition is **associative**
+> - composition is **unital**: for any $f \in \mathcal{C}_m(A,B)$, $\operatorname{id}_B \odot f = f = f \odot \operatorname{id}_A$
 
-- a collection of objects $C_o$
-    
-- for any pair of _objects_ A and B, a collection of _morphisms_ $C_m(A,B)$
-    
-- for any morphism $f \in C_m(A,b)$ and any morphism $g \in C_m(B,C)$, we have a morphism $(g \odot f) \in C_m(A,C)$ called the compoisiton of g and f
-    
-- for any object A, we have $id_A \in C_m(A,A)$ called the identity morphism on A  
-    such that the following hold:
-    
-- composition is associative
-    
-- it is unital? for any $f \in C_m(A,B)$ we have $\operatorname{id}_B \odot f = f = f \odot \operatorname{id}_A$
-    
+Given a category $\mathcal{C}$:
 
-Given a category C:  
-We write $Ob(C) := C_o$ for its collection of objects  
-"its not objects that matter its the morphisms that matter"  
-If $f \in C_m(A,B)$ is a morphism from A to B, we indicate this by writing $f \rightarrow B$  
-The A is called domain and B is called co domain of f.  
-We also write $\operatorname{Hom}_C(A,B)$ for the collection of morphisms from A to B  
-$C(A,B)$ is also for the same, we drop the subscript m
+- We write $\operatorname{Ob}(\mathcal{C}) := \mathcal{C}_o$ for its collection of objects.
+- _"It's not the objects that matter, it's the morphisms that matter."_
+- If $f \in \mathcal{C}_m(A,B)$, we write $f : A \to B$. $A$ is called the **domain** and $B$ the **codomain** of $f$.
+- We write $\operatorname{Hom}_{\mathcal{C}}(A,B)$ or $\mathcal{C}(A,B)$ for the collection of morphisms from $A$ to $B$ (dropping the subscript when unambiguous).
+- Since composition is associative, we drop the brackets.
 
-Since composition is associative, we drop the brackets.
+**Remark.** Why _collections_ and not _sets_? For a category $\mathcal{C}$, $\operatorname{Ob}(\mathcal{C})$ and $\mathcal{C}(A,B)$ need not be sets — they can be "large," e.g. the collection of all sets. There is no set of all sets (self-reference, paradox).
 
-collection? and not set? why?  
-_Remark_: For category C, the collections Ob(C) and C(A,B) they do not have to be sets. they can be large, like : collection of all sets, we do not have sets of all sets (self reference, paradox!)
+**Definition (small / locally small).**
 
-When Ob(C) is a set and C(A,B) is a set for any pair of objects A,B \in Ob(C), then we say C is _small_ category  
-If C(A,B) is a set for every $A,B \in Ob(C)$, then we say that C is a _locally small_ category  
-For a locally small category C, we say that C(A,B) is a _hom-set._ (also known as _external hom_)
+- $\mathcal{C}$ is **small** if $\operatorname{Ob}(\mathcal{C})$ is a set and $\mathcal{C}(A,B)$ is a set for every pair $A,B$.
+- $\mathcal{C}$ is **locally small** if $\mathcal{C}(A,B)$ is a set for every $A,B \in \operatorname{Ob}(\mathcal{C})$.
+- For a locally small category, $\mathcal{C}(A,B)$ is called a **hom-set** (or _external hom_).
 
 ## Examples
 
-### Set
+_Example (Set)._ Objects are sets, morphisms are functions between them.
 
-The category **Set** is defined to be the category whose objects are sets and whose morphisms are functions between them.
+- $\operatorname{Ob}(\mathbf{Set})$ is the collection of all sets.
+- $\mathbf{Set}(X,Y) := {f \mid f : X \to Y \text{ is a function}}$
+- identity morphism = identity function on $X$
 
-- Ob(Set) is the collection of all sets.
-    
-- Given two sets, X and Y, we define the ext hom / hom set $\operatorname{Set}(X,Y) := {f \mid f \rightarrow Y \text{ is a function}}$
-    
-- the identity morphism is given by the identity funtion on X
-    
+_Remark:_ $\mathbf{Set}$ is locally small, but not small.
 
-_Remark_ : **Set** is locally small , but it is not small.
+_Example (Pos)._ Objects are posets, morphisms are monotone functions between them.
 
-### Partial Order
+- $\operatorname{Ob}(\mathbf{Pos})$ are the posets.
+- Given $(X,\le)$ and $(Y,\sqsubseteq)$, $\mathbf{Pos}((X,\le),(Y,\sqsubseteq))$ is the set of monotone maps $X \to Y$.
 
-The category **Pos** is defined to be the category whose objects are partially ordered sets (poset), and morphisms are monotone functions between them.
+_Example (Mat)._
 
-- Ob(Pos) are the posets
-    
-- given two posets $(X, \leq), (Y, \sqsubseteq)$ , we define $\operatorname{Pos}((X,\leq),(Y,\sqsubseteq))$
-    
+- $\operatorname{Ob}(\mathbf{Mat})$ = natural numbers
+- $\operatorname{Hom}(n,m)$ = $m \times n$ matrices
+- identity morphism: the identity matrix
+- composition: matrix multiplication
 
-### Natural nos, matrices
+$\mathbf{Mat}$ is a small category.
 
-let _Mat_ be the category with
+_Example (a monoid as a one-object category)._ Every monoid $(M, \circ, 1)$ can be seen as a one-object category $\mathbf{M}$:
 
-- Ob(Mat) are the natural numbers
-    
-- Hom(n,m) = { A is a $m \times n$ matrix}
-    
-- the identity morphism : identity matrix
-    
-- composition : matrix multiplication
-    
+- one object $*$
+- $\operatorname{Hom}(-,-) = M$ — the morphisms _are_ the elements of $M$
+- $\operatorname{id}_* : * \to *$ is $1$
+- composition is the monoid operation
 
-Mat is a small category.
+If $M$ is small (as a set), then $\mathbf{M}$ is small; if $M$ is not small, $\mathbf{M}$ is not locally small.
 
-### Monoid
+**Remark.** This course sticks to locally small categories. _sadge_
 
-Every monoid $(M,\circ, 1)$ can be seen as a 1 - object category  
-Define _M_ to be the following category
+## Monomorphism, epimorphism, isomorphism
 
-- It has only one object, lets call it $*$
-    
-- $Hom(*,*)=M$ , i.e. the morphisms are the elements of M
-    
-- the identity $id_*: * \rightarrow *$ os defined as 1
-    
-- composition : monoid operation
-    
+**Definition (Monomorphism).** $f: B \to C$ is a **monomorphism** iff for every object $A$ and every pair of morphisms $g,h : A \to B$: $$f \circ g = f \circ h \implies g = h$$
 
-If M is a small, then **M** is small.  
-if M is not small, then **M** is not locally small.
+_Example._ In $\mathbf{Set}$, monomorphisms coincide with injective functions.
 
-_Remark: This course will stick to locally small categories_  
-sadge
+**Definition (Epimorphism).** $f : A \to B$ is an **epimorphism** iff for every pair of morphisms $g,h : B \to C$: $$g \circ f = h \circ f \implies g = h$$
 
-## Monomorphism
+**Remark.** In $\mathbf{Set}$, epimorphisms coincide with surjective functions — why?
 
-f : $B \rightarrow C$ is a monomorphism iff for all objects A, every pair of morphisms g,h $A \rightarrow B$, we have that $f \circ g = f \circ h \implies g = h$
+- $f$ surjective $\implies$ $f$ epi.
+- Suppose $f$ is _not_ surjective. Then $g,h$ can agree on the image of $f$ (so $g \circ f = h \circ f$) while disagreeing somewhere outside it — so $g \ne h$ overall.
 
-### examples
+**Definition (Isomorphism).** $f : A \to B$ is an **isomorphism** if there exists $g : B \to A$ with $g \circ f = \operatorname{id}_A$ and $f \circ g = \operatorname{id}_B$.
 
-**Set**, monomorphisms coincide with injective functions
+_Remark:_ the inverse, when it exists, is unique.
 
-## Epimorphism
+**Claim.** Every object has a unique identity morphism.
 
-$$g \circ f = h \circ f \implies g = h$$
-
-In sets, they are the surjective functions, why?  
-f surjective implies epi  
-suppose f not surjective, then it is possible that the domain of the compositions are a subset of A and not equal to A, so on the intersection of these domains, g and h will be equal but not overall.
-
-## Isomorphism
-
---
-
-the inverse is unique.
-
-## questions
-
-> every object has a unique identity morphism.
-
-trivial.
+**Proof.** Suppose $e, e' \in \mathcal{C}(A,A)$ both satisfy the identity law. Then $e = e \odot e' = e'$, using unitality on each side in turn.
 
 ## Functor
 
-between categories. morphism between categories,  
-A **Functor** F from a category **C** to category **D**, is given by the following data
+A **functor** is a morphism _between categories_.
 
-- a map on objects , $A \rightarrow F(A)$
-    
-- a map on morphisms that sends morphisms on **C** to morphisms on **D** ( $f \rightarrow B$ goes to $F(f)(A) \rightarrow F(B)$)
-    
-- F preserves identities
-    
-- F preserves composition
-    
+> [!definition] Functor
+> 
+> A functor $F$ from a category $\mathcal{C}$ to a category $\mathcal{D}$ is given by:
+> 
+> - a map on objects, $A \mapsto F(A)$
+> - a map on morphisms, sending $f : A \to B$ in $\mathcal{C}$ to $F(f) : F(A) \to F(B)$ in $\mathcal{D}$
+> 
+> such that:
+> 
+> - $F$ preserves identities: $F(\operatorname{id}_A) = \operatorname{id}_{F(A)}$
+> - $F$ preserves composition: $F(g \circ f) = F(g) \circ F(f)$
 
-_Notation:_  
-We often FA instead of F(A)  
-Ff instead of F(f)
+_Notation:_ we often write $FA$ for $F(A)$ and $Ff$ for $F(f)$.
 
-### examples
+_Example (Power set functor)._ $P : \mathbf{Set} \to \mathbf{Set}$, $P(X) := {U \mid U \subseteq X}$. _(Verify functoriality.)_
 
-Power Set Functor P: **Set** -> **Set**  
-$P(X) := {U \mid U \subseteq X}$  
-verify.
+_Example (Forgetful functors)._ E.g. $U : \mathbf{Vec} \to \mathbf{Set}$, forgetting the vector space structure and remembering only the underlying set.
 
-forgetful functors
+## Opposite category
 
-## Opposite Category
-
-did not write here
+_(Didn't get this written down in class — come back and fill in the definition of $\mathcal{C}^{\mathrm{op}}$.)_

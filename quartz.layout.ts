@@ -54,7 +54,7 @@ export const defaultContentPageLayout: PageLayout = {
     explorer,
     Component.DesktopOnly(
       Component.RecentNotes({
-        title: "new!!",
+        title: "what's new?",
         limit: 3,
         showTags: false,
       }),

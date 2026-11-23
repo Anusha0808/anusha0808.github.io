@@ -9,54 +9,43 @@ date: 10 November, 2026
 ---
 Objectives of coalitions are described using temporal logic.
 
-## Concurrent Game structures
-$M = (Agt, S, Act, act, \delta, L)$
+## Concurrent game structures
 
-$Agt$ is a finite non empty set of agents
-$S$ is a finite non empty set of states 
-$Act$: finite set of actions
-$L :S \to \mathcal{P}(PROP)$ is a labelling specifying a truth assignment for each state.
+> [!definition] Concurrent game structure (CGS) $M = (Agt, S, Act, act, \delta, L)$ where:
+> 
+> - $Agt$: finite non-empty set of agents
+> - $S$: finite non-empty set of states
+> - $Act$: finite set of actions
+> - $L : S \to \mathcal{P}(PROP)$: labelling, a truth assignment for each state
+> - $act : Agt \times S \to \mathcal{P}(Act)\setminus{\emptyset}$: the action manager — $act(a,s)$ is the (non-empty) set of actions available to agent $a$ at state $s$
+> - $\delta : S \times (Agt \to Act) \to S$: the transition function, a **partial** function. $\delta(s,f)$ is undefined whenever some agent $a$ has $f(a) \notin act(a,s)$ — a mapping $f: Agt \to Act$ compatible with $act$ at $s$ is called a **joint action**.
 
-$act : Agt \times S \to \mathcal{P}(Act) \setminus \emptyset$ is the action manager. It means that for each pair (a,s), the agent a must have some action to do at the state s.
-$act(a,s) \equiv$ set of agents that can be executed by the agent a from the state s
-$\delta: S \times(Agt \to Act) \to S$
-transition function
-$\delta (s,f)$ is undefined if there is some agent a such that $f(a) \not \in act(a,s)$, This is called joint action. It is a partial function.
+A **coalition** is a subset $A \subseteq Agt$; a **joint strategy** of $A$ is a map $g : A \to Act$ (so all agents in $A$ act at the same state — they commit to the same move).
 
-Coalition $A \subseteq Agt$
-joint action $g: A \to Act$ a joint strategy of the coalition
+> [!definition] Turn-based CGS At each state, at most one agent has more than one available action — i.e. at most one agent is actually deciding what to do.
 
-so we assume that at the same state, they do the same transitions.
-### Turn based CGS
-At each state, there is atmost one agent that can perform more than one action. So at most one agent is deciding what to do, the action.
+## Strategic ability
 
-## Strategic Ability
-To express that a coalition of agents have a collective strategy to enforce some property and to reason on it.
+ATL expresses that a coalition has a collective strategy to enforce some property, and lets us reason about it.
 
-ATL is a way to quantify over strategies by a coalition
-## ATL
-$<<A>> \phi$ coalition A has a collective strategy to enforce the temporal property $\phi$
+> [!definition] ATL $\langle\langle A\rangle\rangle\varphi$: coalition $A$ has a collective strategy to enforce the temporal property $\varphi$.
 
-A collective strategy is a tuple of individual strategies.
+A collective strategy is a tuple of individual strategies — this single modality encodes several quantifiers at once.
 
-We encode several modalities in one over here. This has a term -- 
+> [!remark] In turn-based CGSs, pushing negation inside past $\langle\langle A\rangle\rangle$ turns it into $\langle\langle \overline{A}\rangle\rangle$ (the complementary coalition).
 
-In turn based CGS, we can push the negation of $\not \models$ to inside and $<<A>>$ becomes $<< \bar{A}>>$
+> [!question] Do we need history-dependent strategies? No — only **positional** strategies suffice, so there are only finitely many strategies to brute-force over.
 
-do we have history deterministic strategies? not required! only positional strategies suffice. so we only have finitely many strategies to brute force our way through.
+## Variant semantics of ATL
 
+- plans instead of strategies
+- finite-memory / memoryful strategies (not needed for ATL itself, but for ATL$^*$, for example)
+- quantifying over strategies
 
-## variant semantics of ATL
-- plans instead of strategies 
-- finite memory / memoryfull strategies ( not required for ATL, but ATL$^*$ for example)
-- quanitify over strategies 
+## Strategic logic
 
-## strategic logic
-We quantify over strategies. ( like monadic second order logic )
+Quantifies explicitly over strategies (cf. monadic second-order logic) — "internalising" the semantics of ATL / ATL$^*$.
 
-We are "internalising" the semantics of ATL, ATL$^*$ 
+### Incomplete information in ATL
 
-### incomplete information in ATL
-
-Some states cannot be distinguished by a player. For example $s_0 \equiv s_1$ _for_ Agent $1$
-
+Some states cannot be distinguished by a given player: e.g. $s_0 \equiv_1 s_1$ for Agent $1$.
