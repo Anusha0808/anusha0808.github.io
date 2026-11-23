@@ -9,11 +9,12 @@ Hey, this is Anusha Gupta :), an MPRI student in theoretical computer science, b
 ## currently
 I am mostly thinking and reading about different kinds of logic, [[Category Theory]], algorithms and verification. And, of course, whatever interesting thing I happen to stumble upon while doing my [[MPRI]].
 ## my interests 
-I am interested in Theoretical Computer Science. I like how "clean" thinking in logic is, and how it makes me look at things in a philosophical manner. I have also started teaching! I teach classes for the preparation of [[my quirkier, non professional introduction#^e10c6f|informatics olympiad]]. 
-## don't forget to check out
-- [[my quirkier, non professional introduction]] 
-- [[Academic Profile]]
-- [[what's a garden?]]
+I am interested in Theoretical Computer Science. I like how "clean" thinking in logic is, and how it makes me look at things in a philosophical manner. I have also started teaching! I teach classes for the preparation of [[Informatics Olympiad|informatics olympiad]]. 
+## where do I start?
+- *if you are an academic person* $\to$[[Academic Profile]]
+- *if you wanna know more about me* [[my quirkier, non professional introduction]] and my sidequests in [[pond/index|pond]] 
+- if you wanna see some cool informatics olympiad problems and tips 🔆 [[Informatics Olympiad]]
+- *if you are just curious 👀 [[what's a garden?]]
 ## about me
 I am currently a M1 student at [ENS Paris-Saclay](https://ens-paris-saclay.fr/), doing the [[MPRI]]. Before this, I did my Bachelor's in Mathematics and Theoretical Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in/). 
 

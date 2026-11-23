@@ -118,8 +118,6 @@
   --heading-5: #5E6B52;           // brown fading toward sage
   --heading-6: var(--tertiary);   // #6E8B74 — sage
 }
-
-// ---- DARK MODE: brass -> gold -> tan -> beige ramp, all warm, all light enough on burgundy
 // ---- DARK MODE: brass -> clay -> tan -> beige ramp, muted rather than golden
 :root[saved-theme="dark"] {
   --heading-1: var(--secondary);  // #F2B880 — brass orange
@@ -670,7 +668,20 @@ body[data-slug="index"] .popover-hint p:first-of-type::first-letter {
   padding: 0 !important;
   color: var(--blush);
 }
+// drop cap: pond entries only (not topics/blog — doesn't suit reference-style notes)
 
+body[data-slug="pond"] article > p:first-of-type::first-letter,
+body[data-slug^="pond/"] article > p:first-of-type::first-letter {
+  float: left !important;
+  position: static !important;
+  font-family: var(--font-dropcap) !important;
+  font-size: 4.5rem !important;
+  font-weight: normal;
+  line-height: 0.2em !important;
+  margin: 0.04em 0.1em 0 0 !important;
+  padding: 0 !important;
+  color: var(--blush);
+}
 // Graph box: the "Graph View" title stays in normal document flow, above the
 // canvas. The frame is drawn on .graph-outer (the canvas wrapper) only, and
 // is sized entirely by its own padding — not by an inset measured from the
