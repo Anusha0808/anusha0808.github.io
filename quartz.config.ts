@@ -32,17 +32,28 @@ const config: QuartzConfig = {
       // as CSS variables (--light, --dark, --secondary, ...) and derives every
       // other colour from them, so this is the only place to change colours.
       colors: {
-        lightMode: {
-          light: "#F7F4EF", // page background
-          lightgray: "#DDD7D0", // borders, dividers
-          gray: "#9A928A", // muted text, graph nodes
-          darkgray: "#514C46", // body text
-          dark: "#292622", // headings, titles
-          secondary: "#80634F", // links, accents
-          tertiary: "#708B7E", // link hover, tags, visited graph nodes
-          highlight: "rgba(128, 99, 79, 0.12)", // internal-link background
+        // lightMode: {
+        //   light: "#F7F4EF", // page background
+        //   lightgray: "#DDD7D0", // borders, dividers
+        //   gray: "#9A928A", // muted text, graph nodes
+        //   darkgray: "#514C46", // body text
+        //   dark: "#292622", // headings, titles
+        //   secondary: "#80634F", // links, accents
+        //   tertiary: "#708B7E", // link hover, tags, visited graph nodes
+        //   highlight: "rgba(128, 99, 79, 0.12)", // internal-link background
+        //   textHighlight: "#fff23688",
+        // },
+          lightMode: {
+          light: "#F0E3D2",        // was #FBF4ED — darker, warmer tan
+          lightgray: "#DECBB5",    // borders, dividers — a pale version of the burgundy
+          gray: "#9C8477",         // muted text, graph nodes
+          darkgray: "#4A3B34",     // body text — brown, not black
+          dark: "#2B211C",         // headings, titles
+          secondary: "#B06A3C",    // links, accents — brass-orange, same family as dark mode
+          tertiary: "#6E8B74",     // link hover, tags — sage green
+          highlight: "rgba(176, 106, 60, 0.10)",  // internal-link background
           textHighlight: "#fff23688",
-        },
+      },
         darkMode: {
           light: "#522E38", // page background (burgundy)
           lightgray: "#6E4452", // borders, dividers

@@ -98,14 +98,6 @@
   --font-victorian: "VictorianDisplay", serif;
   --font-dropcap: "DropCap", serif;
 
-  // heading ramp: plain --dark in light mode
-  --heading-1: var(--dark);
-  --heading-2: var(--dark);
-  --heading-3: var(--dark);
-  --heading-4: var(--dark);
-  --heading-5: var(--dark);
-  --heading-6: var(--dark);
-
   // decorative accent (drop cap, explorer icons)
   --blush: var(--secondary);
 
@@ -116,17 +108,28 @@
   --quote-bg: color-mix(in srgb, var(--secondary) 8%, transparent);
 }
 
+// ---- LIGHT MODE: warm brass -> brown -> sage ramp, dark enough for contrast on tan paper
+:root,
+:root[saved-theme="light"] {
+  --heading-1: var(--secondary);  // #B06A3C — brass orange
+  --heading-2: #9C5A32;           // darker burnt orange
+  --heading-3: #7C6350;           // warm brown
+  --heading-4: #6E5C46;           // muted olive-brown
+  --heading-5: #5E6B52;           // brown fading toward sage
+  --heading-6: var(--tertiary);   // #6E8B74 — sage
+}
+
+// ---- DARK MODE: brass -> gold -> tan -> beige ramp, all warm, all light enough on burgundy
+// ---- DARK MODE: brass -> clay -> tan -> beige ramp, muted rather than golden
 :root[saved-theme="dark"] {
-  // heading ramp: orange > rose > lilac
-  --heading-1: var(--secondary);
-  --heading-2: #c98686;
-  --heading-3: #c8a5c8;
-  --heading-4: #bfa5c7;
-  --heading-5: #9e8eb8;
+  --heading-1: var(--secondary);  // #F2B880 — brass orange
+  --heading-2: #C98A6A;           // muted clay/terracotta (was golden #E2A66B)
+  --heading-3: var(--tertiary);   // #E7CFBC — beige
+  --heading-4: #C9AF93;           // dusty tan
+  --heading-5: #B8A08A;           // deeper dusty tan-brown
   --heading-6: var(--tertiary);
 
   --blush: #e3b09a;
-
   --pre-bg: color-mix(in srgb, black 20%, transparent);
 }
 
