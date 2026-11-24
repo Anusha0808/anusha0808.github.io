@@ -120,4 +120,5 @@ _Example (Forgetful functors)._ E.g. $U : \mathbf{Vec} \to \mathbf{Set}$, forge
 
 ## Opposite category
 
-_(Didn't get this written down in class — come back and fill in the definition of $\mathcal{C}^{\mathrm{op}}$.)_
+>[!todo] complete 
+>_(Didn't get this written down in class — come back and fill in the definition of $\mathcal{C}^{\mathrm{op}}$.)_

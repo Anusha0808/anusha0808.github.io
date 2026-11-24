@@ -222,17 +222,18 @@ pre {
 $callout-colors: (
   "abstract": var(--tertiary),
   "info": var(--darkgray),
-  "todo": #4f86e8,
-  "tip": #2ebfc9,
-  "success": #3fb27f,
-  "question": #e3a63c,
-  "warning": #e58a3a,
-  "failure": #d95c5c,
-  "danger": #d95c5c,
-  "bug": #d8639c,
-  "example": #9b72d9,
+  "todo": color-mix(in srgb, var(--secondary) 80%, var(--tertiary)),      // warm gold-sage
+  "tip": var(--tertiary),
+  "success": color-mix(in srgb, var(--tertiary) 70%, var(--darkgray)),    // deeper sage
+  "question": color-mix(in srgb, var(--secondary) 60%, var(--gray)),     // muted gold-brown
+  "warning": var(--secondary),                                           // brass/orange itself
+  "failure": color-mix(in srgb, var(--secondary) 50%, var(--dark)),      // deep rust
+  "danger": color-mix(in srgb, var(--secondary) 50%, var(--dark)),
+  "bug": color-mix(in srgb, var(--secondary) 55%, var(--tertiary)),      // dusty rose-brown
+  "example": color-mix(in srgb, var(--tertiary) 55%, var(--secondary)),  // sage-brass blend
   "quote": var(--tertiary),
-  "theorem": var(--gray),
+  "solution": color-mix(in srgb, var(--tertiary) 60%, var(--secondary)),
+
 );
 
 .callout[data-callout] {
@@ -284,82 +285,58 @@ $callout-colors: (
   --icon-acorn:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='black'%3E%3Cpath d='M8 10c0-4 2-6 4-6s4 2 4 6c0 1-1 2-2 2H10c-1 0-2-1-2-2z'/%3E%3Cpath d='M9 12h6v4a3 3 0 01-6 0v-4z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-.callout-icon svg {
-  display: none !important;
+
+
+// Botanical icons: Quartz reads --callout-icon per callout, so we just set it
+// per type — no hiding or masking tricks needed, the stock CSS does that.
+.callout[data-callout="abstract"],
+.callout[data-callout="quote"] {
+  --callout-icon: var(--icon-sprig);
 }
 
-.callout-icon {
-  position: relative;
-  width: 1.1rem;
-  height: 1.1rem;
+.callout[data-callout="info"],
+.callout[data-callout="tip"] {
+  --callout-icon: var(--icon-flower);
 }
 
-.callout-icon::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--color);
-  mask-image: var(--icon-leaf); // default = note/undeclared types
-  -webkit-mask-image: var(--icon-leaf);
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-position: center;
-  mask-mode: alpha; // important: forces alpha-based masking (see note below)
-  -webkit-mask-mode: alpha;
+.callout[data-callout="todo"] {
+  --callout-icon: var(--icon-sprout);
 }
 
-// per-type assignment — types that already share a color (abstract/quote,
-// warning/failure/danger) share an icon too, for visual consistency
-.callout[data-callout="abstract"] .callout-icon::before,
-.callout[data-callout="quote"] .callout-icon::before {
-  mask-image: var(--icon-sprig);
-  -webkit-mask-image: var(--icon-sprig);
+.callout[data-callout="success"] {
+  --callout-icon: var(--icon-clover);
 }
 
-.callout[data-callout="info"] .callout-icon::before,
-.callout[data-callout="tip"] .callout-icon::before {
-  mask-image: var(--icon-flower);
-  -webkit-mask-image: var(--icon-flower);
+.callout[data-callout="question"] {
+  --callout-icon: var(--icon-vine);
 }
 
-.callout[data-callout="todo"] .callout-icon::before {
-  mask-image: var(--icon-sprout);
-  -webkit-mask-image: var(--icon-sprout);
+.callout[data-callout="warning"],
+.callout[data-callout="failure"],
+.callout[data-callout="danger"] {
+  --callout-icon: var(--icon-thorn);
 }
 
-.callout[data-callout="success"] .callout-icon::before {
-  mask-image: var(--icon-clover);
-  -webkit-mask-image: var(--icon-clover);
+.callout[data-callout="bug"] {
+  --callout-icon: var(--icon-bug);
 }
 
-.callout[data-callout="question"] .callout-icon::before {
-  mask-image: var(--icon-vine);
-  -webkit-mask-image: var(--icon-vine);
+.callout[data-callout="example"] {
+  --callout-icon: var(--icon-acorn);
 }
 
-.callout[data-callout="warning"] .callout-icon::before,
-.callout[data-callout="failure"] .callout-icon::before,
-.callout[data-callout="danger"] .callout-icon::before {
-  mask-image: var(--icon-thorn);
-  -webkit-mask-image: var(--icon-thorn);
+.callout[data-callout="theorem"] {
+  --callout-icon: var(--icon-leaf);
 }
 
-.callout[data-callout="bug"] .callout-icon::before {
-  mask-image: var(--icon-bug);
-  -webkit-mask-image: var(--icon-bug);
+// safety net: if stock callouts.scss doesn't already force alpha masking,
+// a solid black silhouette can render as invisible under luminance masking
+.callout .callout-icon {
+  mask-mode: alpha !important;
+  -webkit-mask-mode: alpha !important;
 }
-
-.callout[data-callout="example"] .callout-icon::before {
-  mask-image: var(--icon-acorn);
-  -webkit-mask-image: var(--icon-acorn);
-}
-
-.callout[data-callout="theorem"] .callout-icon::before {
-  mask-image: var(--icon-leaf);
-  -webkit-mask-image: var(--icon-leaf);
+.callout[data-callout="solution"] {
+  --callout-icon: var(--icon-clover);  // or pick another of the nine you already have
 }
 // =============================================================================
 // ACADEMIC CALLOUTS: theorem / proposition / lemma / corollary / definition /
@@ -405,9 +382,9 @@ article {
   }
 
   // no icon on academic types — a number does that job instead
-  .callout[data-callout="#{$name}"] .callout-icon {
-    display: none !important;
-  }
+  .callout[data-callout="#{$name}"] {
+  --callout-icon: none;
+}
 
   // bold small-caps label, colored, no box-style title row
   .callout[data-callout="#{$name}"] .callout-title {
@@ -465,6 +442,7 @@ article {
   font-weight: 600;
   font-style: italic;
 }
+
 // =============================================================================
 // 6. SIDEBARS (dark theme) + POPOVERS
 // =============================================================================

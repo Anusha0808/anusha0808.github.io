@@ -35,18 +35,16 @@ the $i^{th}$ pigeon is placed in the the $j^{th}$ pigeonhole. Write down a formu
 the Pigeonhole Principle. What is the length of your formula as a function of n?
 
 
-###### SOLUTION
-Suppose we also had a connective $\exists$
+>[!solution]- SOLUTION
+> Suppose we also had a connective $\exists$
 Then using that, the formula becomes
 $\exists i \exists j,k : p_{ij} \land p_{ik}$  
-
-Now we can derive the logical connective $\exists$
+> Now we can derive the logical connective $\exists$
 Let $\beta_{ijk} = p_{ij} \land p_{ik}$ 
 Let $\alpha_i = \beta_{i11} \lor \beta_{i12} ... \lor \beta_{inn}$
 Then the original formula becomes 
 $\alpha_1 \lor \alpha_2 \lor ... \lor \alpha_{n+1}$
-
-Length of the formula : $n \times (n-1) \times (n+1)$ 
+> Length of the formula : $n \times (n-1) \times (n+1)$ 
 
 Shorter solution? I do not have it right now.
 
