@@ -9,7 +9,7 @@ Hey, this is Anusha Gupta :), an MPRI student in theoretical computer science, b
 ## currently
 I am mostly thinking and reading about different kinds of logic, [[Category Theory]], algorithms and verification. And, of course, whatever interesting thing I happen to stumble upon while doing my [[MPRI]].
 
-I have also started teaching! I teach classes for the preparation of [[Informatics Olympiad|informatics olympiad]]. Currently, I am teaching three students and organisning a one week bootcamp in December/January. More details here: [The Silver Cow](https::/thesilvercow.com) 
+I have also started teaching! I teach classes for the preparation of [[Informatics Olympiad|informatics olympiad]]. Currently, I am teaching three students and organisning a one week bootcamp in December/January. More details here: [The Silver Cow](https://thesilvercow.com) 
  
 ## where do I start?
 - *if you are an academic person* $\to$ [[Academic Profile]]
