@@ -22,8 +22,8 @@ A few questions which we can help us start thinking
 - [ ] Where should we put this operation? At the beginning, somewhere in the middle or towards the end? If we put at the end, i.e. make this the last operation, then the grid before the last operation should consist of all 1s and no 0s.
 - [ ] What if we make it the first operation? Then we can get "rid" of it after fixing it, and we wont have to worry about it anymore. We can choose to forget about it, and focus on the resulting picture we have which looks like this :
 
-![[Pasted image 20261109152804.png|284]]
-![[Pasted image 20261109152954.png|292]]
+![[Pasted image 20261109152804.png|251]]![[Pasted image 20261109152954.png|249]]
+
 Now, how about we focus on the new "corner" pieces we have? the red ones?
 
 After fixing them , maybe, maybe we can forget them? Like how we did before? Can we do it?
@@ -59,3 +59,4 @@ counter=0
 	return counter + solve_grid(grid[1...n-1][1..n-1], n-1)
 }
 ```
+

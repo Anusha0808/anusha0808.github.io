@@ -850,16 +850,16 @@ body[data-slug="index"] .popover-hint p:first-of-type::first-letter {
 }
 // drop cap: pond entries only (not topics/blog — doesn't suit reference-style notes)
 
-body[data-slug="pond"] article > p:first-of-type::first-letter,
-body[data-slug^="pond/"] article > p:first-of-type::first-letter {
+body[data-slug^="pond/"] article > p:first-of-type::first-letter,
+ body[data-slug^="blog/"] article > p:first-of-type::first-letter  {
   float: left !important;
   position: static !important;
   font-family: var(--font-dropcap) !important;
   font-size: 4.5rem !important;
   font-weight: normal;
   line-height: 0.2em !important;
-  margin: 0.04em 0.1em 0 0 !important;
-  padding: 0 !important;
+  margin: 0.1em 0px 10px 0 !important;
+  padding: 0px !important;
   color: var(--blush);
 }
 // Graph box: the "Graph View" title stays in normal document flow, above the
